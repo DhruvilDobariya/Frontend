@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            width: 20%;
+            height: 40px;
+            background: red;
+            position: relative;
+            margin: 10px 0px;
+        }
+        .animation1{
+            /* Standard syntax */
+            animation-name: leftToRight;
+            animation-duration: 4s;
+            animation-delay: 2s;
+            animation-fill-mode: forwards;
+            animation-iteration-count: 4;
+            /* animation-play-state: paused; */
+            animation-play-state: running; 
+            animation-timing-function: ease-in-out;
+
+            /* Chrome, Safari, Opera
+            -webkit-animation-name: leftToRight;
+            -webkit-animation-duration: 2s; */
+        }
+
+        .animation2{
+            animation: 10s 2s leftToRight backwards;
+        }
+
+        /* Chrome, Safari, Opera 
+        @-webkit-keyframes leftToRight{
+            from{left : 0%;}
+            to{left: 50%;}
+        } */
+
+
+        /* Standard syntax */
+        @keyframes leftToRight{
+            from{left : 0%;}
+            to{left: 50%;}
+        }
+    </style>
+</head>
+<body>
+    <div class="animation1">
+        
+    </div>
+    <div class="animation2">
+        
+    </div>
+</body>
+</html>

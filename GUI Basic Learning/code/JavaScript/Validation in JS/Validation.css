@@ -1,0 +1,26 @@
+.header {
+    /*background-image: linear-gradient(to right,#333333,#dd1818)*/
+    /*background-image: linear-gradient(to right,#13294b,#d61b3c);*/
+    background-image: linear-gradient(to right,#13294b,#dd1818);
+}
+.header2 {
+    background-image: linear-gradient(to right,#13294b,#13294b);
+}
+
+.header2:hover {
+    color: white;
+}
+
+.btn-gradient {
+    background-color: #13294b;
+    color: white;
+}
+
+.btn-gradient:hover {
+    background-color: #163e7b;
+    color: white;
+}
+.btn-blue {
+    background-color: rgb(81,43,212);
+    color: white;
+}

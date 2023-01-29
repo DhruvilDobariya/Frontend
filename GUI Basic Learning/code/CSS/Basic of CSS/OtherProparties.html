@@ -1,0 +1,68 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        body{
+            max-width: 70%;
+            max-height: 100%;
+            min-width: none;
+            min-height: none;
+        }
+        #Cursor{
+            cursor: pointer;
+        }
+        #Direction{
+            direction: rtl;
+        }
+        #Display{
+            display: block;
+        }
+        #Img{
+            position: relative;
+            height: 200px;
+            width: 470px;
+            opacity: 20%;
+        }
+        p{
+            word-wrap: normal;
+            word-break: normal;
+            word-spacing: 10px;
+        }
+        .float{
+            background: red;
+            height: 20px;
+            width: 40px;
+        }
+        #Box1{
+            float: left;
+        }
+        #Box2{
+            float: right;
+        }
+    </style>
+</head>
+<body>
+    <div id="Display">
+        <div>
+            <button id="Cursor">Ckick me</button>
+        </div>
+        <div>
+            <input type="text" name="" id="Direction">
+        </div>
+        <div>
+            <img src="../../Images/Microsoft.jpeg" alt="" id="Img">
+        </div>
+        <div>
+            <p>Lorem ipsum dolor, sit amet consectetur adipisicing elit. Quisquam nihil optio non voluptates quos quia sunt modi facere placeat odit atque voluptate sit doloribus molestias, nam vel velit eaque provident.</p>
+        </div>
+        <div>
+            <div class="float" id="Box1"></div>
+            <div class="float" id="Box2"></div>
+        </div>
+    </div>
+</body>
+</html>

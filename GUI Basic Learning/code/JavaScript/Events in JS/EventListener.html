@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../Bootstrap/assets/lib/bootstrap/css/bootstrap.min.css">
+    <script src="../../Bootstrap/assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="EventListener.js"></script>
+</head>
+<body>
+    <div>
+        <div class="row justify-content-evenly mt-5">
+            <div id="Parent1" class="bg-dark p-3 col-md-2 d-flex justify-content-center">
+                <button id="Child1" class="btn btn-danger">Bubbling</button>
+            </div>
+            <div id="Parent2" class="bg-dark p-3 col-md-2 d-flex justify-content-center">
+                <button id="Child2" class="btn btn-danger">Capturing</button>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

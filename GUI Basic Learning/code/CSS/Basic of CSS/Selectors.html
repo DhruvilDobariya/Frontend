@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        /* Universel Selector */
+        *{
+            background-color: rgb(209, 209, 209);
+            font-size: 25px;
+        }
+        /* Id Selector */
+        #Id-Selector{
+            color: red;
+        }
+        /* Class Selector */
+        .class-selector{
+            color: white;
+        }
+        /* Tag Selector */
+        span{
+            color: green;
+        }
+        /* Attribute Selector */
+        [type=text]{
+            color: aqua;
+        }
+
+        /* Select List Selector */
+        i,.select-list-with-class{
+            color: blue;
+        }
+
+        /* Descendant Combinator */
+        div b{
+            color: blueviolet;
+        }
+        /* Child Combinator */
+        p>b{
+            color: brown;
+        }
+        /* Sibling Combinator */
+        h3~h4,h3~.sibling-combinator-with-class{
+            color: cadetblue;
+        }
+        /* Adjacent Combinator */
+        header+footer{
+            color: yellowgreen;
+        }
+
+        /* Pseudo Classes Selector */
+        a:visited{
+            color: coral;
+        }
+        input:invalid{
+            background-color: red;
+        }
+        /* Pseudo Element Selector */
+        p::first-line{
+            color: rgb(73, 82, 27);
+        }
+        
+    </style>
+</head>
+<body>
+      <div>
+        <div>
+            <p id="Id-Selector">Id Selector</p>
+        </div>
+        <div>
+            <p class="class-selector">Class Selector</p>
+        </div>
+        <div>
+            <p>
+                <span>Type Selector or Tag Selector</span>
+            </p>
+        </div>
+        <div>
+            <p>
+                <input type="text" value="Attribute Selector">
+            </p>
+        </div>
+        <div>
+            <p>
+                <i>Select List Selector Node 1</i>
+                <p class="select-list-with-class">Select List Selector Node 2</p>
+            </p>
+        </div>
+        <div>
+            <p>
+                <h2>
+                    <b>Descendant Combinator</b>
+                </h2>
+            </p>
+        </div>
+        <div>
+            <p>
+                <b>Child Combinator</b>
+            </p>
+        </div>
+        <div>
+            <p>
+                <h3></h3>
+                <h4>Sibling Combinator Node 1</h4>
+                <h5 class="sibling-combinator-with-class">Sibling Combinator Node 2</h5>
+            </p>
+        </div>
+        <div>
+            <p>
+                <header></header>
+                <footer>Adjacent Combinator</footer>
+            </p>
+        </div>
+        <div>
+            <p>
+                <a href="https://www.google.com/">Pseudo Classes Selector</a>
+                <form action="">
+                    <input type="email" name="" id="input">
+                    <button type="submit">Submit</button>
+                </form>
+            </p>
+        </div>
+        <div>
+            <p>
+                Lorem ipsum dolor, sit amet consectetur adipisicing elit. Excepturi et quisquam exercitationem illo amet quod deleniti aut quam error, deserunt molestiae natus provident qui accusamus ea reprehenderit vitae minus placeat!
+            </p>
+        </div>
+      </div>
+</body>
+</html>
