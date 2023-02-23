@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#btn").click(function(){
+                let x = $("#num1").val();
+                let y = $("#num2").val();
+                sum(x,y);
+            });
+
+            function sum(x,y){
+                ans = parseFloat(x) + parseFloat(y);
+                $(document).trigger("display");
+            }
+
+            $(document).on("display",function(){
+                alert(ans);
+            })
+            
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input type="number" name="" id="num1">
+        <input type="number" name="" id="num2">
+        <button id="btn">Click me</button>
+    </div>
+</body>
+</html>

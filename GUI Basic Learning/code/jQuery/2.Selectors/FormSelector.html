@@ -1,0 +1,107 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // select input class="form-item"
+            console.log($(".form-item:input"));
+
+            // type text
+            console.log($(".form-item:text").val());
+
+            // password
+            console.log($(".form-item:password").val());
+
+            // radio button
+            console.log($(".form-item:radio").val());
+
+            // checkbox
+            console.log($(".form-item:checkbox"));
+
+            // submit
+            console.log($(".form-item:submit"));
+
+            // reset
+            console.log($(".form-item:reset"));
+
+            // button
+            console.log($(".form-item:button"));
+
+            // image
+            console.log($(".form-item:image"));
+
+            // file
+            console.log($(".form-item:file"));
+
+            // enabled
+            console.log($(".form-item:enabled"));
+
+            // disabled
+            console.log($(".form-item:disabled"));
+
+            // selected
+            console.log($(".list-item:selected").val());
+
+            // checked
+            console.log($(".radio:checked").val());
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            <form action="">
+                <div>
+                    Text: 
+                    <input class="form-item" type="text" name="" id="" value="text">
+                    <input class="form-item" type="text" name="" id="" disabled value="disable">
+                </div>
+                <div>
+                    Password: 
+                    <input class="form-item" type="password" name="" id="" value="password">
+                </div>
+                <div>
+                    Radio button: 
+                    <input class="form-item" type="radio" name="radio" class="radio" id="" checked value="radio1">
+                    <input class="form-item" type="radio" name="radio" class="radio" id="" value="radio2">
+                </div>
+                <div>
+                    Checkbox: 
+                    <input class="form-item" type="checkbox" name="checkbox" checked id="" value="checkbox1">
+                    <input class="form-item" type="checkbox" name="checkbox" checked id="" value="checkbox2">
+                    <input class="form-item" type="checkbox" name="checkbox" id="" value="checkbox3">
+                    <input class="form-item" type="checkbox" name="checkbox" id="" value="checkbox4">
+                </div>
+                <div>
+                    Select: 
+                    <select name="" id="">
+                        <option class="list-item" value="1" selected>1</option>
+                        <option class="list-item" value="2">2</option>
+                        <option class="list-item" value="3">3</option>
+                        <option class="list-item" value="4">4</option>
+                    </select>
+                </div>
+                <div>
+                    Image: 
+                    <img src="../../Images/Microsoft.jpeg" alt="">
+                </div>
+                <div>
+                    File: 
+                    <input class="form-item" type="file" name="" id="file">
+                </div>
+                <div>
+                    <input class="form-item" type="button" name="" id="" value="Back">
+                    <input class="form-item" type="reset" name="" id="">
+                    <input class="form-item" type="submit" name="" id="">
+                </div>
+            </form>
+        </div>
+    </div>
+</body>
+</html>

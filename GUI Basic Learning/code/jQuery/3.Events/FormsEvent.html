@@ -1,0 +1,96 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 2em 0.5em;
+        }
+    </style>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#Blur").blur(function(){
+                console.log("Filed 1 blur.");
+            });
+
+            $("#Focus").focus(function(){
+                console.log("Filed 2 focus.");
+            });
+
+            $("#Select").select(function(){
+                console.log("Filed 3 Select.");
+            });
+            
+            $("#Change").change(function(){
+                console.log("Filed 4 Change.");
+            });
+
+            $("#form").submit(function(){
+                alert("Form Submit");
+            });
+
+            // The focusin and focusout events bubble, the focus and blur events doesn't. That means that you can use the focusin and focusout on the parent element of a form field.
+
+            $("#Field5").focusin(function(){
+                console.log("Field 5 is focued in");
+            });
+
+            $("#Field5").focusout(function(){
+                console.log("Field 5 is focued out");
+            });
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <form id="form">
+            <div>
+                <h2>Blur</h2>
+                <label for="Blur">Field 1:</label>
+                <input type="text" name="" id="Blur">
+            </div>
+
+            <div>
+                <h2>Focus</h2>
+                <label for="Focus">Field 2:</label>
+                <input type="text" name="" id="Focus">
+                
+                <label for="" id="lblFocus"></label>
+            </div>
+
+            <div>
+                <h2>Select</h2>
+                <label for="Select">Field 3:</label>
+                <input type="text" name="" id="Select"">
+                
+                <label for=""></label>
+            </div>
+            <div>
+                <h2>Select</h2>
+                
+                <label for="Change">Field 4:</label>
+                <select name="" id="Change">
+                    <option value="1">Dhruvil</option>
+                    <option value="2">Dhaval</option>
+                    <option value="3">Bhargav</option>
+                    <option value="4">Jenil</option>
+                </select>
+                <label for=""></label>
+            </div>
+            <div>
+                <h2>Focus in Focus out</h2>
+                <label for="Field5">Field 5:</label>
+                <input type="text" name="" id="Field5">
+            </div>
+            <div>
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

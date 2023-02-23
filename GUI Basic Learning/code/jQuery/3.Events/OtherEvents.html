@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#on").on("click",function(){
+                console.log("Click me 1 clicked");
+            });
+            
+            $("#off").click(function(){
+                console.log("Click me 2 clicked");
+            });
+            
+            $("#off").off("click");
+            
+            $("#one").click(function(){
+                console.log("Click me 3 clicked");
+            }).one('dblclick',function(){
+                console.log("Click me 3 double clicked");
+            });
+            
+            var x = 0;
+            $(window).resize(function(){
+                $("span").text(x += 1);
+            });
+            
+            $("#on").trigger('click'); // trigger event
+
+            $("#on").triggerHandler("click"); // trigger handler
+
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            <button id="on">Click me 1</button>
+        </div>
+        <div>
+            <button id="off">Click me 2</button>
+        </div>
+        <div>
+            <button id="one">Click me 3</button>
+        </div>
+        <div>
+            <p>Window resized <span>0</span> times.</p>
+        </div>
+    </div>
+</body>
+</html>

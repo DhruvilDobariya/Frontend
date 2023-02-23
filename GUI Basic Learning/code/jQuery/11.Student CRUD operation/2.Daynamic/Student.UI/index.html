@@ -1,0 +1,84 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Student</title>
+    <link rel="stylesheet" href="../../../../assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://pro.fontawesome.com/releases/v5.10.0/css/all.css" integrity="sha384-AYmEC3Yw5cVb3ZcuHtOA93w35dYTsvhLPVnYs9eStHfGJvOvKxVfELGroGkvsg+p" crossorigin="anonymous"/>
+    <style>
+        .header{
+            background-image: linear-gradient(to right,#333333,#dd1818);
+        }
+    </style>
+</head>
+<body>
+    <div class="header sticky-top bg-dark text-light p-2">
+        <h2>
+            <i class="fas fa-user-graduate"></i>
+            Student
+        </h2>
+    </div>
+    <div class="container-fluid">
+        <div class="row m-3 justify-content-center">
+            <form class="col-md-5" id="form">
+                <div class="row">
+                    <div class="col-md-3 mb-3">
+                        <label for="Name" class="form-label">Name</label>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <input type="text" value="" name="Name" id="" class="col-md-8 form-control input" placeholder="Enter Name">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="RollNo" class="form-label">Roll No</label>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <input type="number" value="" name="RollNo" id="" class="col-md-8 form-control input" placeholder="Enter Roll No">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="EmailId" class="form-label">Email Id</label>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <input type="email" value="" name="EmailId" id="" class="col-md-8 form-control input" placeholder="Enter Enrollment No">
+                    </div>
+                    <div class="col-md-3 mb-3">
+                        <label for="MobileNo" class="form-label">Mobile No</label>
+                    </div>
+                    <div class="col-md-8 mb-3">
+                        <input type="text" value="" name="MobileNo" id="" class="col-md-8 form-control input" placeholder="Enter Mobile No">
+                    </div>
+                    <div class="col-md-6 d-flex justify-content-end">
+                        <button type="button" class="btn btn-success" id="submit">Submit</button>
+                    </div>
+                    <div class="col-md-6">
+                        <button type="reset" class="btn btn-danger">Reset</button>
+                    </div>
+                </div>
+            </form>
+        </div>
+        <div class="row m-2">
+            <div class="col-md-12">
+                <table class="table table-hover">
+                    <thead class="bg-dark text-light">
+                        <tr>
+                            <th scope="col">No</th>
+                            <th scope="col">Student Id</th>
+                            <th scope="col">Name</th>
+                            <th scope="col">Roll No</th>
+                            <th scope="col">Email Id</th>
+                            <th scope="col">Mobile No</th>
+                            <th scope="col" class="d-flex justify-content-center">Action</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                    </tbody>
+                </table>
+            </div>
+        </div>
+    </div>
+    <script src="../../../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script src="../../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="./Student.js"></script>
+</body>
+</html>

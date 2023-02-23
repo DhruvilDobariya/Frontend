@@ -1,0 +1,12 @@
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\bin\Debug\net7.0\Book.Repositories.deps.json
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\bin\Debug\net7.0\Book.Repositories.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\bin\Debug\net7.0\Book.Repositories.pdb
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\Book.Repositories.csproj.AssemblyReference.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\Book.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\Book.Repositories.AssemblyInfoInputs.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\Book.Repositories.AssemblyInfo.cs
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\Book.Repositories.csproj.CoreCompileInputs.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\Book.Repositories.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\refint\Book.Repositories.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\Book.Repositories.pdb
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Repositories\obj\Debug\net7.0\ref\Book.Repositories.dll

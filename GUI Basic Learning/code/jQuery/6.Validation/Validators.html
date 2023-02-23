@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="../../assets/lib/bootstrap/css/bootstrap.min.css">
+    <style>
+        .error{
+            color: red;
+        }
+    </style>
+    
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script src="../../assets/lib/jQuery/dist/jquery.validate.min.js"></script>
+    <script src="../../assets/lib/jQuery/dist/additional-methods.min.js"></script>
+    <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="Validators.js"></script>
+</head>
+<body>
+    <div class="container mt-5">
+        <div class="border p-4">
+            <div>
+                <h2>
+                    Create User
+                </h2>
+            </div>
+            <div>
+                <form id="form" method="">
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="Name" class="form-label">Name</label>
+                            <input type="text" name="name" class="form-control" id="Name" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Email" class="form-label">Name</label>
+                            <input type="email" name="email" class="form-control" id="Email" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="Username" class="form-label">Username</label>
+                            <input type="text" name="username" class="form-control" id="Username" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="URL" class="form-label">URL</label>
+                            <input type="url" name="url" class="form-control" id="URL" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="Gender" class="form-label">Gender</label> 
+                            <input type="radio" name="gender[]" class="form-check-input" id="Gender" /> Male
+                            <input type="radio" name="gender[]" class="form-check-input" id="Gender" /> Female
+                            <p>
+                                <label for="gender[]" class="form-label error"></label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <input type="text" hidden value="18" name="" id="AgeLimite">
+                            <label for="Age" class="form-label">Age</label>
+                            <input type="text" name="age" class="form-control" id="Age" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Address" class="form-label">Address</label>
+                            <textarea name="address" id="Address" class="form-control" cols="30" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="Password" class="form-label">Password</label>
+                            <input type="password" name="password" class="form-control" id="Password" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="ConfirmPassword" class="form-label">Confirm Password</label>
+                            <input type="password" name="confirmPassword" class="form-control" id="ConfirmPassword" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="Step" class="form-label">Step</label>
+                            <input type="text" name="step" class="form-control" id="Step" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Number" class="form-label">Number</label>
+                            <input type="text" name="number" class="form-control" id="Number" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="Digits" class="form-label">Digits</label>
+                            <input type="text" name="digits" class="form-control" id="Digits" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Date" class="form-label">Date</label>
+                            <input type="text" name="date" class="form-control" id="Date" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <input type="checkbox" name="termsConditions" class="form-check-input" id="TermsConditions" /> 
+                            <label for="TermsConditions" class="form-label">Accept Terms and Conditions</label> 
+                            <p>
+                                <label for="termsConditions" class="form-label error"></label>
+                            </p>
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <span id="summary"></span>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-success" id="btnSubmit" type="submit">Submit</button>
+                        <button class="btn btn-danger" type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+</body>
+</html>

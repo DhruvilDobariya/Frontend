@@ -1,0 +1,88 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 2em 0.5em;
+        }
+        .box{
+            background-color: gray;
+            height: 5em;
+            width: 20em;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+        .item{
+            background-color: white;
+            font-size: 1.2em;
+        }
+    </style>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script src="MouseEvent.js"></script>
+</head>
+<body>
+    <div>
+        <div>
+            <button id="btnClick">On Click</button>
+        </div>
+        <div>
+            <button id="btnDoubleClick">On Double Click</button>
+        </div>
+        <div>
+            <button id="btnMouseEnter">On Mouse Enter</button>
+        </div>
+        <div>
+            <button id="btnMouseLeave">On Mouse Leave</button>
+        </div>
+        <div>
+            <button id="btnMouseOver">On Mouse Over</button>
+        </div>
+        <div>
+            <button id="btnMouseOut">On Mouse Out</button>
+        </div>
+        <div>
+            <button id="btnMouseUp">On Mouse Up</button>
+        </div>
+        <div>
+            <button id="btnMouseDown">On Mouse Down</button>
+        </div>
+        <div>
+            <button id="btnHover">Hover Mouse</button>
+        </div>
+        <div>
+            <span id="lblMouseMove"></span>
+        </div>
+    </div>
+
+    <!-- <div>
+        <h4>Mouse over v/s Mouse enter</h4>
+        <div class="box" id="MouseOver" onmouseover="MouseOver(this)">
+            <p class="item">Mouse Over occurred : 0</p>
+        </div>
+        <div class="box" id="MouseEneter" onmouseenter="MouseEnter(this)">
+            <p class="item">Mouse Enter occurred : 0</p>
+        </div>
+    </div>
+    <div>
+        <h4>Mouse out v/s Mouse leave</h4>
+        <div class="box" id="MouseOut" onmouseout="MouseOut(this)">
+            <p class="item">Mouse Out occurred : 0</p>
+        </div>
+        <div class="box" id="MouseLeave" onmouseleave="MouseLeave(this)">
+            <p class="item">Mouse Leave occurred : 0</p>
+        </div>
+    </div> -->
+    <!-- 
+        => The mouseover event triggers when the mouse pointer over any child elements as well the     selected element.
+        => The mouseenter event is only triggered when the mouse pointer enters the selected element. 
+        
+        => The mouseout event triggers when the mouse pointer leaves any child elements as well the     selected element.
+        => The mouseleave event is only triggered when the mouse pointer leaves the selected element. 
+    -->
+</body>
+</html>

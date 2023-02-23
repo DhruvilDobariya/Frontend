@@ -1,0 +1,12 @@
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\bin\Debug\net7.0\Book.Domain.deps.json
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\bin\Debug\net7.0\Book.Domain.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\bin\Debug\net7.0\Book.Domain.pdb
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\Book.Domain.csproj.AssemblyReference.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\Book.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\Book.Domain.AssemblyInfoInputs.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\Book.Domain.AssemblyInfo.cs
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\Book.Domain.csproj.CoreCompileInputs.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\Book.Domain.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\refint\Book.Domain.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\Book.Domain.pdb
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\Book.Domain\obj\Debug\net7.0\ref\Book.Domain.dll

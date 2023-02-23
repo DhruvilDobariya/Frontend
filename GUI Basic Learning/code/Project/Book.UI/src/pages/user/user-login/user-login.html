@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>User Login</title>
+    <link rel="icon" type="image/x-icon" href="../../../../assets/images/favicon.png">
+    
+    <!-- css section start -->
+    <link rel="stylesheet" href="../../../../assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../assets/lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../../assets/lib/toastr/toastr.min.css">
+    <link rel="stylesheet" href="../../../global.css">
+    <link rel="stylesheet" href="./user-login.css">
+    <!-- css section end -->
+    
+</head>
+<body>
+    <div class="row">
+        <div class="col-md-4 offset-md-4">
+            <div class="box">
+                <form class="form-signin m-3 p-3 pt-5">
+                    <div class="d-flex justify-content-center">
+                        <img class="mb-4" src="../../../../assets/images/favicon.png" alt="" width="72" height="72">
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <h1 class="h3 fw-normal">Welcome</h1>
+                    </div>
+                    <div class="d-flex justify-content-center">
+                        <p>Sign in with your id</p>
+                    </div>
+                    <div class="form-floating mb-3">
+                        <input type="text" class="form-control" name="email" id="Email" placeholder="Email">
+                        <label for="Email">Email</label>
+                    </div>
+                    <div class="form-floating">
+                        <input type="password" class="form-control" name="password" id="Password" placeholder="Password">
+                        <label for="Password">Password</label>
+                    </div>
+                    <label for="password" class=".error"></label>
+                    <div class="mt-2 text-center">
+                        <input type="checkbox" name="rememberMe" id="RememberMe" class="form-check-input" />
+                        <label for="RememberMe">Remember Me</label>
+                    </div>
+                    <span class="error d-flex justify-content-center"></span>
+                    <button type="submit" class="w-100 btn btn-danger btn-lg my-3">Login</button>
+                    <a href="../user-add-edit/user-add-edit.html?id=0" class="w-100 my-3">Sign up</a>
+                </div>
+            </form>
+        </div>
+    </div>
+</div>
+<!-- script section start -->
+<script src="../../../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+<script src="../../../../assets/lib/jQuery/jquery.validate.min.js"></script>
+<script src="../../../../assets/lib/jQuery/additional-methods.min.js"></script>
+<script src="../../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+<script src="../../../../assets/lib/fontawesome/js/all.min.js"></script>
+<script src="../../../../assets/lib/toastr/toastr.min.js"></script>
+<script src="../../../globle.js"></script>
+<script type="module" src="./user-login.js"></script>
+<!-- script section end -->
+</body>
+</html>

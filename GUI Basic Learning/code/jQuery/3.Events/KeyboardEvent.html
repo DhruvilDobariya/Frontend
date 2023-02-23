@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#keypress").keypress(function(ecvent){
+                console.log(event.target.value);
+            });
+
+            $("#keyup").keyup(function(){
+                console.log(this.value);
+            });
+
+            $("#keydown").keydown(function(ecvent){
+                console.log(event.target.value);
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <input type="text" name="" id="keypress">
+        <!-- 
+            => Event fired repetatively util we pressed key.
+            => If we type n keyword, then It gives n-1 keyword. 
+        -->
+    </div>
+    <div>
+        <input type="text" name="" id="keyup">
+        <!-- 
+            => Event fired when key up.
+            => If we type n keyword, then It gives n keyword.
+        -->
+    </div>
+    <div>
+        <input type="text" name="" id="keydown">
+        <!-- 
+            => Event fired rwhen key down.
+            => If we type n keyword, then It gives n-1 keyword.
+        -->
+    </div>
+</body>
+</html>

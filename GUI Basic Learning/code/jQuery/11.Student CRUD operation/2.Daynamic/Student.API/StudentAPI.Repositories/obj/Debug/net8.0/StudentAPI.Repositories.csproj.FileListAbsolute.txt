@@ -1,0 +1,15 @@
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\bin\Debug\net8.0\StudentAPI.Repositories.deps.json
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\bin\Debug\net8.0\StudentAPI.Repositories.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\bin\Debug\net8.0\StudentAPI.Repositories.pdb
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\StudentAPI.Repositories.csproj.AssemblyReference.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\StudentAPI.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\StudentAPI.Repositories.AssemblyInfoInputs.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\StudentAPI.Repositories.AssemblyInfo.cs
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\StudentAPI.Repositories.csproj.CoreCompileInputs.cache
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\StudentAPI.Repositories.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\refint\StudentAPI.Repositories.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\StudentAPI.Repositories.pdb
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\ref\StudentAPI.Repositories.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\bin\Debug\net8.0\StudentAPI.Domain.dll
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\bin\Debug\net8.0\StudentAPI.Domain.pdb
+D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\jQuery\11.Student CRUD operation\2.Daynamic\Student.API\StudentAPI.Repositories\obj\Debug\net8.0\StudentAPI.Repositories.csproj.CopyComplete

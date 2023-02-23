@@ -1,0 +1,52 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // have attribute
+            console.log($(".item[title]").text());
+            
+            // have same attribute value
+            console.log($(".item[title='node1 content 1']").text());
+            
+            // have not same attribute value
+            console.log($(".item[title!='node1 content 1']").text());
+            
+            // start with
+            console.log($(".item[title^='node']").text());
+            
+            // end with
+            console.log($(".item[title$='content 1']").text());
+
+            // equals or starting with value
+            console.log($(".item[title|='node1 content 1']").text());
+
+            // contains specific whole word
+            console.log($(".item[title~='node1']").text());
+            
+            // contains any sub part of word
+            console.log($(".item[title*='node']").text());
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <div class="div1">
+            <p class="item" title="node1 content 1">Content 1 Node 1</p>
+            <p class="item" title="node2 content 1">Content 1 Node 2</p>
+            <p class="item" title="node3 content 1">Content 1 Node 3</p>
+            <p class="item" title="node4 content 1">Content 1 Node 4</p>
+            <p class="item" title="node5 content 1">Content 1 Node 5</p>
+            <p class="item" title="node6 content 1">Content 1 Node 6</p>
+            <p class="item" title="node7 content 1">Content 1 Node 7</p>
+            <p class="item" title="node8 content 1">Content 1 Node 8</p>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,16 @@
+html, body {
+    height: 100%;
+    background-color: white;
+}
+li{
+    list-style : none;
+}
+a{
+    text-decoration: none;
+    color: gray;
+    cursor: pointer;
+}
+a:hover{
+    text-decoration: underline;
+    color: rgb(117, 109, 109);
+}

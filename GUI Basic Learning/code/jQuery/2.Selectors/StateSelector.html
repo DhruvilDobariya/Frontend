@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // header selector
+            console.log($(".item:header").text());
+            
+            // animation
+            console.log($(".item:animated").text());
+            
+            // Contanins
+            console.log($(".item:contains('Content 1')").text());
+            
+            // has
+            console.log($(".item:has(span)").text());
+
+            // empty
+            $(":empty").css("background-color", "yellow");
+
+            // parent
+            console.log($(".item:parent").text());
+
+            // hidden
+            console.log($(".item:hidden").text());
+
+            // visible
+            console.log($(".item:visible").text());
+
+            // root
+            console.log($(".item:root").text());
+
+            // lang
+            console.log($(".item:lang('it')").text());
+
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <div id="div1">
+            <h2 class="item">Content 1 Node 1</h2>
+            <p class="item">
+                <span>Content 1 Node 2 Sub Node 1</span>
+                <span>Content 1 Node 2 Sub Node 2</span>
+            </p>
+            <p class="item" lang="it">Content 1 Node 3</p>
+            <h5 class="item">Content 1 Node 4</h5>
+            <p class="item" hidden>Content 1 Node 5</p>
+        </div>
+        <div class="div2">
+            <table border="">
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td></td>
+                </tr>
+                <tr>
+                    <td>1</td>
+                    <td>2</td>
+                </tr>
+                <tr>
+                    <td></td>
+                    <td>2</td>
+                </tr>
+            </table>
+        </div>
+    </div>
+</body>
+</html>

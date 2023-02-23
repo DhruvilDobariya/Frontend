@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log($("#list").children()); // return array of children
+            console.log($("div#container").find("li#item1")); // return all parrent
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="content1">
+            <ul id="list">
+                <li id="item1">1</li>
+                <li id="item2">2</li>
+                <li id="item3">3</li>
+                <li id="item4">4</li>
+                <li id="item5">5</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 1em;
+        }
+    </style>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script src="EventProparties.js"></script>
+</head>
+<body>
+    <div>
+        <button id="btn1">Currunt Target</button>
+    </div>
+    <div>
+        <input type="text" name="" id="txt1">
+    </div>
+    <div>
+        <span id="lblPosition"></span>
+    </div>
+    <div>
+        <a id="action1" href="https://www.google.com/">Google</a>
+    </div>
+    <div>
+        <button id="btn2">Stop Propogation</button>
+    </div>
+    <div>
+        <div id="div1" style="height:200px; width:400px; border:solid" >
+            This is a div element 
+            <p id="p1" style="background-color:pink">This is a paragraph</p>
+        </div>
+    </div>
+    <div>
+        <input type="number" name="" id="num1">
+        <input type="number" name="" id="num2">
+        <input type="button" name="" id="btn3" value="Submit">
+    </div>
+
+    <div id="div2" style="height: 200px; width: 400px; background: gray; padding: 1em;">
+        For stopPropagation
+        <p id="p2" style="padding: 1.2em; background: green;">
+            Paragraph Content
+            <br>
+            <span id="span1" style="background: yellow;">Span Content</span>
+        </p>
+    </div>
+    <div id="div3" style="height: 200px; width: 400px; background: gray; padding: 1em;">
+        For stopImmediatePropagation
+    </div>
+</body>
+</html>

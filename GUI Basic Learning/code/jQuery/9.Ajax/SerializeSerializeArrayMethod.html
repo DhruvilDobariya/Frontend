@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("button").click(function(){
+                $("#p1").text($("form").serialize());
+                console.log($("form").serialize());
+                console.log(typeof($("form").serialize()));
+                console.log($("form").serializeArray());
+                console.log(typeof($("form").serializeArray()));
+            });
+        });
+    </script>
+</head>
+<body>
+    <div>
+        <form action="">
+            First name: <input type="text" name="FirstName" value=""><br>
+            Last name: <input type="text" name="LastName" value=""><br>
+        </form>
+        <button>Submit</button>
+    </div>
+</body>
+</html>

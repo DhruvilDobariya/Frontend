@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            console.log($("#item4").siblings()); // return array of sibling
+            console.log($("#item4").next()); // return next sibling
+            console.log($("#item4").nextAll()); // return next all array sibling
+            console.log($("#item4").nextUntil("li#item7")); // return next all array sibling until specific node
+            console.log($("#item4").prev()); // return previous sibling
+            console.log($("#item4").prevAll()); // return previous all array sibling
+            console.log($("#item4").prevUntil("li#item1")); // return previous all array sibling until specific node
+        });
+    </script>
+</head>
+<body>
+    <div id="container">
+        <div id="content1">
+            <ul id="list">
+                <li id="item1">1</li>
+                <li id="item2">2</li>
+                <li id="item3">3</li>
+                <li id="item4">4</li>
+                <li id="item5">5</li>
+                <li id="item6">6</li>
+                <li id="item7">7</li>
+            </ul>
+        </div>
+    </div>
+</body>
+</html>

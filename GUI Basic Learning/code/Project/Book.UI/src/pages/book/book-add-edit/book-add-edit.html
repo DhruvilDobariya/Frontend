@@ -1,0 +1,166 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Book Add Edit</title>
+    <link rel="icon" type="image/x-icon" href="../../../../assets/images/favicon.png">
+    
+    <!-- css section start -->
+    <link rel="stylesheet" href="../../../../assets/lib/bootstrap/css/bootstrap.min.css">
+    <link rel="stylesheet" href="../../../../assets/lib/fontawesome/css/all.min.css">
+    <link rel="stylesheet" href="../../../../assets/lib/toastr/toastr.min.css">
+    <link rel="stylesheet" href="../../../global.css">
+    <link rel="stylesheet" href="./book-add-edit.css">
+    <!-- css section end -->
+    
+</head>
+<body>
+    <header>
+        <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark header border-bottom box-shadow mb-3">
+            <div class="container-fluid">
+                <a class="navbar-brand mx-5" asp-area="" asp-controller="Home" asp-action="Index">
+                    Book
+                </a>
+                <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+                    <span class="navbar-toggler-icon"></span>
+                </button>
+                <div class="navbar-collapse collapse d-sm-inline-flex justify-content-between ms-5">
+                    <ul class="navbar-nav flex-grow-1" id="nav-items">
+                        <li class="nav-item mx-2">
+                            <a class="nav-link" href="../../home/home.html">
+                                <i class="fa-solid fa-house"></i>
+                            </a>
+                        </li>
+                        <li class="nav-item mx-2">
+                            <a class="nav-link active" href="../book-list/book-list.html">
+                                Book
+                            </a>
+                        </li>
+                    </ul>
+                </div>
+                <div class="d-flex align-items-center justify-content-end nav-item dropdown">
+                    <a role="button" data-bs-toggle="dropdown" aria-expanded="false" class="nav-link btn text-light p-0 btn-lg me-3 d-flex align-items-end user">
+                        <span class="mx-2" id="user"></span>
+                        <i class="fas fa-user-circle fs-3"></i>
+                    </a>
+                    <ul class="dropdown-menu" aria-labelledby="navbarDropdown">
+                        <li>
+                            <a class="dropdown-item" href="../../user/user-add-edit/user-add-edit.html">Edit User</a>
+                        </li>
+                        <li>
+                            <hr class="dropdown-divider">
+                        </li>
+                        <li>
+                            <button class="dropdown-item" id="btnLogOut">Log out</button>
+                        </li>
+                    </ul>
+                </div>
+            </div>
+        </nav>
+    </header>
+    
+    <div class="container mt-5">
+        <div class="border p-4">
+            <div>
+                <h2 id="header">
+                    Add Book
+                </h2>
+            </div>
+            <div>
+                <form id="form">
+                    <input type="text" name="id" id="id" value="0" hidden />
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="Title" class="form-label">Title</label>
+                            <input type="text" name="title" class="form-control" id="Title" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Author" class="form-label">Author</label>
+                            <input type="text" name="author" class="form-control" id="Author" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <div class="d-flex align-items-end justify-content-between pe-2 mt-3">
+                                <label for="Rating" class="form-label">Rating</label>
+                                <span>
+                                    <input type="radio" value="1" name="rating[]" class="form-check-input" id="Rating" /> 1
+                                </span>
+                                <span>
+                                    <input type="radio" value="2" name="rating[]" class="form-check-input" id="Rating" /> 2
+                                </span>
+                                <span>
+                                    <input type="radio" value="3" name="rating[]" class="form-check-input" id="Rating" /> 3
+                                </span>
+                                <span>
+                                    <input type="radio" value="4" name="rating[]" class="form-check-input" id="Rating" /> 4
+                                </span>
+                                <span>
+                                    <input type="radio" value="5" name="rating[]" class="form-check-input" id="Rating" /> 5
+                                </span>
+                            </div>
+                            <p class="d-flex align-items-end">
+                                <label for="rating[]" class="form-label error"></label>
+                            </p>
+                        </div>
+                        <div class="col-md-6">
+                            <label for="Price" class="form-label">Price</label>
+                            <input type="number" name="price" class="form-control" id="Price" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-6">
+                            <label for="URL" class="form-label">URL</label>
+                            <input type="url" name="url" class="form-control" id="URL" />
+                        </div>
+                        <div class="col-md-6">
+                            <label for="PublishDate" class="form-label">Publish Date</label>
+                            <input type="Date" name="publishDate" class="form-control" id="PublishDate" />
+                        </div>
+                    </div>
+                    <div class="row mt-2">
+                        <div class="col-md-12">
+                            <label for="Description" class="form-label">Description</label>
+                            <textarea name="description" class="form-control" id="Description" cols="30" rows="4"></textarea>
+                        </div>
+                    </div>
+                    <div class="mt-3">
+                        <button class="btn btn-gradient" id="btnSubmit" type="submit">Add</button>
+                        <button class="btn btn-danger" type="reset">Reset</button>
+                    </div>
+                </form>
+            </div>
+        </div>
+    </div>
+    
+    <footer class="mb-0 footer text-muted">
+        <div class="row header2 text-light p-3 mt-5">
+            <p class="text-center m-0">Dhruvil A. Dobariya</p>
+            <p class="text-center m-0">
+                <a  class="btn btn-lg text-light" href="https://www.linkedin.com/in/dhruvil-dobariya-240600209/">
+                    <i class="fab fa-linkedin"></i>
+                </a>
+                <a  class="btn btn-lg text-light" href="https://github.com/DhruvilDobariya">
+                    <i class="fab fa-github"></i>
+                </a>
+            </p>
+            <div class="text-center m-0">
+                &copy; 2023 - Book - <a href="../../home/privacy.html">Privacy</a>
+            </div>
+        </div>
+    </footer>
+    
+    <!-- script section start -->
+    <script src="../../../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script src="../../../../assets/lib/jQuery/jquery.validate.min.js"></script>
+    <script src="../../../../assets/lib/jQuery/additional-methods.min.js"></script>
+    <script src="../../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../../assets/lib/fontawesome/js/all.min.js"></script>
+    <script src="../../../../assets/lib/toastr/toastr.min.js"></script>
+    <script src="../../../globle.js"></script>
+    <script type="module" src="./book-add-edit.js"></script>
+    <!-- script section end -->
+</body>
+</html>

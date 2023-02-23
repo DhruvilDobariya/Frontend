@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $(document).ajaxStart(function(){
+                console.log("Request start");
+            });
+
+            $(document).ajaxSend(function(){
+                console.log("Request send");
+            });
+
+            $(document).ajaxStop(function(){
+                console.log("Request stop");
+            });
+
+            $(document).ajaxComplete(function(){
+                console.log("Request complate");
+            });
+
+            $(document).ajaxError(function(){
+                console.log("Request error");
+            });
+
+            $(document).ajaxSuccess(function(){
+                console.log("Request success");
+            });
+
+            // flow of ajax request event
+            // Request start
+            // Request send
+            // Request success / Request error
+            // Request complate
+            // Request stop 
+
+
+            $.ajax({
+                url: "https://jsonplaceholder.typicode.com/todos/",
+                type: "GET",
+                data : {},
+                datatype : "json",
+                header: {
+
+                }
+            }).done(function(data){
+                console.log(data);
+            }).fail(function(e){
+                console.log(e);
+            });
+
+            
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

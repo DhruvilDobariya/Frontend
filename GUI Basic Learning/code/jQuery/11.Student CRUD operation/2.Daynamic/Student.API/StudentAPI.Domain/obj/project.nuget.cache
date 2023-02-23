@@ -1,0 +1,10 @@
+{
+  "version": 2,
+  "dgSpecHash": "7Qwes5s5DyRh/XBt2BpQC9CVym8qjJiNxbChh4sdZg0WMgsBEa21P8Vul4UDFW9wF9zut8UNiXI+g0bpg1siSA==",
+  "success": true,
+  "projectFilePath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj",
+  "expectedPackageFiles": [
+    "C:\\Users\\Dhruvil.D\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512"
+  ],
+  "logs": []
+}

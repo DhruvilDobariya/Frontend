@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $("#content1").wrap("<i></i>");
+            $(".content2").wrapAll("<b></b>");
+            $("#content3").unwrap();
+            $(".content4").wrapInner("<h2></h2>");
+        })
+    </script>
+</head>
+<body>
+    <div>
+        <div>
+            <p id="content1">Content 1</p>
+        </div>
+        <div>
+            <p class="content2">Content 2 Node 1</p>
+            <p class="content2">Content 2 Node 2</p>
+        </div>
+        <div>
+            <p id="content3">Content 3</p>
+        </div>
+        <div>
+            <p class="content4">Content 4 Node 1</p>
+            <p class="content4">Content 4 Node 2</p>
+        </div>
+    </div>
+</body>
+</html>

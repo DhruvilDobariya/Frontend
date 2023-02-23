@@ -1,0 +1,251 @@
+Meta Tage
+Author name
+discription
+Keywords
+viewport
+=> Attribute: name, content, charset
+
+Input tag:
+text,
+password,
+radio
+checkbox
+button
+submit
+reset
+date
+time
+week
+number
+color
+file
+
+File control:
+type
+id
+name
+class
+value
+accept
+multiple
+
+Form:
+action
+method
+name
+accept-charset
+autocomplet
+encrypy
+target
+rel
+
+Action Tag
+href
+hrefflag
+target: _blank, _parent, _top, _self
+releation
+type
+media
+download
+ping
+
+Img Tag:
+src
+srcset
+alt
+height
+width
+size
+loading
+longdesc
+
+
+HTML vs HTML5:
+Html use browser cache as a temp storege.
+Html5 offres multiple storege option like sql,appplication and browser memory
+HTML5 new tag: header footer, nav, main, audio, video
+
+CSS vs CSS3
+CSS3 offerce advange animation proparties
+=> opicity, box-shadow, media query, new standerd color support like rgba, less memory use
+
+Selector:
+Basic Selector:
+Universel Selector
+Id Selector
+Class Selector
+Tag Selector
+Attribute Selector
+
+Grouping Selector:
+Selectlist
+
+Cominators:
+Child Combinator - >
+Descendant Combinator - space
+Sibling Combinator - ~
+Adjacent Combinator - +
+
+Pseudo Selector:
+Pseudo Class :
+Pseudo Elements ::
+
+Flexbox:
+flex,
+flex-direction,
+flex-wrap,
+flex-flow,
+flex-shrink,
+flex-basic,
+flex-grow,
+order,
+justify-content,
+align-items
+
+Grid:
+grid,
+grid-template-column
+grid-template-row
+row-gap
+column-gap
+grid-column-start
+grid-column-end,
+grid-row-start,
+grid-row-end,
+justify-items,
+justify-self,
+align-items,
+align-self
+
+Background:
+background,
+background-color,
+background-image,
+background-position,
+background-repate
+background-size
+
+Font:
+font,
+color,
+font-femily,
+font-style,
+font-wigth
+font-size
+
+Text:
+text-align,
+text-align-last,
+text-decoration,
+text-decoration-style,
+text-decoration-color,
+text-justify,
+text-shadow,
+text-indent,
+text-transform,
+text-overflow
+
+BoxModel:
+margin,
+padding,
+border,
+border-radius,
+border-style,
+border-image,
+border-width,
+border-color
+
+List:
+list-style,
+list-style-type,
+list-style-image,
+list-style-position
+
+Overflow:
+overflow,
+overflow-x,
+overflow-y
+
+Animation:
+animation,
+animation-name,
+animation-timing-function
+animation-duration,
+animation-delay,
+animation-direction,
+animation-iteration-count,
+animation-fill-mode,
+animation-play-state
+
+Transition:
+transition,
+transmition-proparty,
+transition-duration,
+transition-delay,
+transmition-timing-function
+
+
+JavaScript
+Datatype
+Primitive data type
+number, string, boolean, undefine, null
+Non-primative data type:
+array, object
+
+Array:
+length
+push, pop
+shift, unshift
+sort
+toString
+
+String:
+length
+indexOf
+lastIndexof
+subString
+slice,
+replace
+toUpperCase
+toLowerCase
+
+DateTime:
+getTime
+getSecond
+getMinute
+getHour
+getDay
+getMonth
+getFullYear
+
+Events:
+Mouse:
+onclick
+ondblclick
+mouseup
+mousedown
+mouseenter - only triggerd element
+mouseleave - only triggerd element
+mouseover - triggerd child as well as element
+mouseout - triggerd child as well as element
+onmousewheel
+
+Keyboard:
+keyup - n
+keydown - n-1
+keypress - n-1
+
+Form:
+onsubmit
+onreset
+onfocus
+onblur
+onchange
+onselect
+
+Frame:
+onload
+onabort
+onerro
+onresize
+
