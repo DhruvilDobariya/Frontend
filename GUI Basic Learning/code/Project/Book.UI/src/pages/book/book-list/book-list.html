@@ -6,7 +6,7 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Book List</title>
     <link rel="icon" type="image/x-icon" href="../../../../assets/images/favicon.png">
-
+    
     <!-- css section start -->
     <link rel="stylesheet" href="../../../../assets/lib/bootstrap/css/bootstrap.min.css">
     <link rel="stylesheet" href="../../../../assets/lib/fontawesome/css/all.min.css">
@@ -14,14 +14,14 @@
     <link rel="stylesheet" href="../../../global.css">
     <link rel="stylesheet" href="./book-list.css">
     <!-- css section end -->
-
+    
 </head>
 <body>
     <header>
         <nav class="navbar navbar-expand-sm navbar-toggleable-sm navbar-dark header border-bottom box-shadow mb-3">
             <div class="container-fluid">
-                <a class="navbar-brand mx-5" asp-area="" asp-controller="Home" asp-action="Index">
-                    Book
+                <a class="navbar-brand mx-5">
+                    <i class="fa-solid fa-book-open"></i> Book
                 </a>
                 <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target=".navbar-collapse" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
                     <span class="navbar-toggler-icon"></span>
@@ -78,24 +78,31 @@
             <div class="row m-2">
                 <table class="table table-hover" id="table">
                     <thead class="header2 text-light">
-                        <th hidden>Id</th>
-                        <th>No</th>
-                        <th>Title</th>
-                        <th>Author</th>
-                        <th>Rating</th>
-                        <th>Price</th>
-                        <th>URL</th>
-                        <th class="text-center">Edit</th>
-                        <th class="text-center">Delete</th>
+                        <tr>
+                            <th hidden>Id</th>
+                            <th>No</th>
+                            <th>Title</th>
+                            <th>Author</th>
+                            <th>Rating</th>
+                            <th>Price</th>
+                            <th>URL</th>
+                            <th class="text-center">Edit</th>
+                            <th class="text-center">Delete</th>
+                        </tr>
                     </thead>
                     <tbody id="tbody">
                         
                     </tbody>
                 </table>
             </div>
+            <div class="row justify-content-center align-items-center">
+                <div class="spinner-border" id="spinner" role="status">
+                    <span class="visually-hidden text-gradient">Loading...</span>
+                </div>
+            </div>
         </div>
     </div>
-
+    
     <footer class="mb-0 footer text-muted">
         <div class="row header2 text-light p-3 mt-5">
             <p class="text-center m-0">Dhruvil A. Dobariya</p>
@@ -112,10 +119,12 @@
             </div>
         </div>
     </footer>
-
+    
     <!-- script section start -->
     <script src="../../../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
     <script src="../../../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="../../../../assets/lib/jQuery/jquery.dataTables.min.js"></script>
+    <script src="../../../../assets/lib/jQuery/dataTables.bootstrap5.min.js"></script>
     <script src="../../../../assets/lib/fontawesome/js/all.min.js"></script>
     <script src="../../../../assets/lib/toastr/toastr.min.js"></script>
     <script src="../../../globle.js"></script>

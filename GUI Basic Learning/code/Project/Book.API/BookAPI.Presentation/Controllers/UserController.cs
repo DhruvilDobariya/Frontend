@@ -110,6 +110,10 @@ namespace BookAPI.API.Controllers
             }
             catch (Exception ex)
             {
+                if (ex.Message.Contains("Duplicate entry"))
+                {
+                    return StatusCode(409, "email already exist");
+                }
                 return BadRequest(ex.Message);
             }
         }
@@ -127,7 +131,7 @@ namespace BookAPI.API.Controllers
                     {
                         return BadRequest("user doesn't updated successfully");
                     }
-                    return Ok("user updates successfully");
+                    return Ok("user updated successfully");
                 }
                 else
                 {
@@ -136,6 +140,10 @@ namespace BookAPI.API.Controllers
             }
             catch (Exception ex)
             {
+                if (ex.Message.Contains("Duplicate entry"))
+                {
+                    return StatusCode(409, "email already exist");
+                }
                 return BadRequest(ex.Message);
             }
         }
