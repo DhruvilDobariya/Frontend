@@ -36,20 +36,6 @@ export class UserService{
         });
     }
     updateUser(user){
-        // $.ajax({
-        //     type: "PUT",
-        //     url: this.#baseURL + "api/User/UpdateUser",
-        //     data: JSON.stringify(user),
-        //     dataType: "json",
-        //     headers:{
-        //         'accept': 'text/plain',
-        //         'Content-Type': 'application/json'
-        //     }
-        // }).done(function(data){
-        //     console.log(data)
-        // }).fail(function(e){
-        //     console.log(e.status)
-        // })
         return $.ajax({
             type: "PUT",
             url: this.#baseURL + "api/User/UpdateUser",

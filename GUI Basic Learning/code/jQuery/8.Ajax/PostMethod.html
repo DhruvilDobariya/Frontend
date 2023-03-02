@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            $.post(
+            url = "https://jsonplaceholder.typicode.com/posts",
+            type = "json",
+            data = JSON.stringify({
+                userId: 10,
+                title: "Lorem ipsum dolor sit amet consectetur adipisicing elit. Distinctio veniam, eaque quae, doloremque nobis velit, autem expedita corrupti recusandae architecto odit minus aliquam a voluptas vitae culpa accusantium ullam! Enim?",
+                body : "This is new body"
+            })).done(function(data){
+                console.log("Post added successfully");
+                console.log(data);
+            }).fail(function(e){
+                console.log("Post doesn't added successfully");
+                console.log(e);
+            });
+        });
+    </script>
+</head>
+<body>
+    
+</body>
+</html>

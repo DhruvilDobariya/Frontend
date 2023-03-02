@@ -1,1 +1,0 @@
-student.setCollage("Darshan");

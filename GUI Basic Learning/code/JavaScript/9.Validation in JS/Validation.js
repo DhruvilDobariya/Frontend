@@ -10,7 +10,7 @@ window.onload = () => {
     }
     
     let validateName = (event)=>{
-        
+        console.log("Hello world");
         if(event.target.value === ""){
             event.target.classList.remove("is-valid");
             event.target.classList.add("is-invalid");

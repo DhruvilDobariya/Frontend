@@ -2,6 +2,7 @@
 
 namespace BookAPI.Domain.Models
 {
+    //[Index(nameof(Email), IsUnique = true)]
     public class User
     {
         [Key]
