@@ -2155,23 +2155,23 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dhruvil.D\\.nuget\\packages\\": {},
+    "C:\\Users\\DELL\\.nuget\\packages\\": {},
     "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\BookAPI.Repositories.csproj",
+      "projectUniqueName": "D:\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\BookAPI.Repositories.csproj",
       "projectName": "BookAPI.Repositories",
-      "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\BookAPI.Repositories.csproj",
-      "packagesPath": "C:\\Users\\Dhruvil.D\\.nuget\\packages\\",
-      "outputPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\obj\\",
+      "projectPath": "D:\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\BookAPI.Repositories.csproj",
+      "packagesPath": "C:\\Users\\DELL\\.nuget\\packages\\",
+      "outputPath": "D:\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
       ],
       "configFilePaths": [
-        "C:\\Users\\Dhruvil.D\\AppData\\Roaming\\NuGet\\NuGet.Config",
+        "C:\\Users\\DELL\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
@@ -2187,8 +2187,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj": {
-              "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj"
+            "D:\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj": {
+              "projectPath": "D:\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj"
             }
           }
         }
@@ -2235,26 +2235,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.1.23115.2\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.102\\RuntimeIdentifierGraph.json"
       }
     }
   }

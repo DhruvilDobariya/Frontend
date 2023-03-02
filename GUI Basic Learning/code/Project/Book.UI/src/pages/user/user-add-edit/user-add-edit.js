@@ -110,7 +110,7 @@ function updateUser(user){
             window.location.href = "../../home/home.html";
         },2000);
     });
-    updateUserPromise.fail(function(e){
+    updateUserPromise.fail(function(_e){
         console.log(e.status);
         toastr.error(e.responseText);
     });

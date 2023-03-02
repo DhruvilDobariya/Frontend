@@ -54,8 +54,8 @@ function userLogin(login){
         sessionStorage.setItem("email", data.email);
         sessionStorage.setItem("password", data.Password);
         setTimeout(()=>{
-            window.location.href = "../../home/home.html";
-        },2000);
+            window.location.href = "../../home/home.html"
+        },2000)
     });
     userValidate.fail(function(e){
         $("span").text(e.responseText)

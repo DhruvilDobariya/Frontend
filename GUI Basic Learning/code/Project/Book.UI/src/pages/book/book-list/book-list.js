@@ -56,13 +56,7 @@ function fillData(){
                 </td>
             </tr>
             `);
-        });
-        $("#table").DataTable();
-        $("#table_filter").addClass("d-flex justify-content-end mb-2");
-        $("#table_paginate").addClass("d-flex justify-content-end");
-        $("#table_length").parent().addClass("d-flex align-items-end mb-2");
-        $("#table_length > label").html($("#table_length > label").children()[0]);
-        $("#spinner").hide();
+        })
     })
     .catch(e => console.log(e));
 }
@@ -70,10 +64,9 @@ function fillData(){
 function romoveBook(id){
     let deleteBookPromise = deleteBook(id);
     deleteBookPromise.done((data) => {
-        toastr.success(data, ()=>{
-            $("tbody").empty();
-            fillData();
-        });
+        $("tbody").empty();
+        fillData();
+        toastr.success(data);
     })
     .fail((e) => {
         toastr.error(e.responseText);

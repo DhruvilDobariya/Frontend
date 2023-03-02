@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        div{
+            margin: 2em 0.5em;
+        }
+    </style>
+    <script src="FormEvents.js"></script>
+</head>
+<body>
+    <div>
+        <form action="" onreset="onReset()" onsubmit="onSubmit()">
+            <div>
+                <h2>Blur</h2>
+                <label for="Blur1">Field 1:</label>
+                <input type="text" name="" id="Blur1" onblur="onBlur(this)">
+
+                <label for="Blur2">Field 2:</label>
+                <input type="text" name="" id="Blur2" onblur="onBlur(this)">
+                
+                <label for=""></label>
+            </div>
+
+            <div>
+                <h2>Focus</h2>
+                <label for="Focus1">Field 1:</label>
+                <input type="text" name="" id="Focus1" onfocus="onFocus(this)">
+
+                <label for="Focus2">Field 2:</label>
+                <input type="text" name="" id="Focus2" onfocus="onFocus(this)">
+                
+                <label for=""></label>
+            </div>
+
+            <div>
+                <h2>Select</h2>
+                <label for="Select1">Field 1:</label>
+                <input type="text" name="" id="Select1" onselect="onSelect(this,true)">
+                
+                <label for=""></label>
+            </div>
+            <div>
+                <h2>Select</h2>
+                <label for="Change1">Field 1:</label>
+                <input type="text" name="" id="Change1" value="" onchange="onChange(this,true)">
+
+                <!-- In input, onchange event reflect all change when element is blued. -->
+                
+                <label for="Change2">Field 2:</label>
+                <select name="" id="Change2" onchange="onChange(this, false)">
+                    <option value="1">Dhruvil</option>
+                    <option value="2">Dhaval</option>
+                    <option value="3">Bhargav</option>
+                    <option value="4">Jenil</option>
+                </select>
+                <label for=""></label>
+            </div>
+            <div>
+                <input type="reset" value="Reset">
+                <input type="submit" value="Submit">
+            </div>
+        </form>
+    </div>
+</body>
+</html>

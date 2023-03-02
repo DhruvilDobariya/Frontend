@@ -2,9 +2,9 @@ Create Database BookDB;
 use BookDB;
 create table User (
 	Id INT not null auto_increment primary key,
-	Name VARCHAR(50) not null,
-	Email VARCHAR(50) not null unique,
-	Password VARCHAR(50) not null
+	Name VARCHAR(50),
+	Email VARCHAR(50),
+	Password VARCHAR(50)
 );
 insert into User (Id, Name, Email, Password) values (1, 'Josefa Carty', 'jcarty0@macromedia.com', 'm2QDW0ZGzVy');
 insert into User (Id, Name, Email, Password) values (2, 'Teodora Kerrod', 'tkerrod1@mit.edu', 'AAnbmdt');

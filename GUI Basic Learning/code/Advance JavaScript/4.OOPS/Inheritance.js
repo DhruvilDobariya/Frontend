@@ -11,7 +11,7 @@ class Person{
 
     getPerson(){
         console.log(this.personId + " " + this.firstName + " " + this.lastName);
-        // if we don't write this then it give error like lastName is not defined.
+        // if we don't write this then it give erro like lastName is not defined.
     }
 }
 
