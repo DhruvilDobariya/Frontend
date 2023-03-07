@@ -32,9 +32,9 @@ namespace BookAPI.Repositories.Services
 
         #region GetEnities
         /// <summary>
-        /// retrive all T type entity details
+        /// retrive all T type entities details
         /// </summary>
-        /// <returns>list of object of all T type entity</returns>
+        /// <returns>list of object of all T type entities</returns>
         public async Task<IEnumerable<T>> GetAllAsync()
         {
             try
@@ -42,12 +42,12 @@ namespace BookAPI.Repositories.Services
                 if (_connection.State != ConnectionState.Open)
                     _connection.Open();
 
-                IEnumerable<T> entity = await _connection.QueryAsync<T>("Select * From " + _tableName);
+                IEnumerable<T> entities = await _connection.QueryAsync<T>("Select * From " + _tableName);
 
                 if (_connection.State == ConnectionState.Open)
                     _connection.Close();
 
-                return entity;
+                return entities;
             }
             catch (Exception)
             {
