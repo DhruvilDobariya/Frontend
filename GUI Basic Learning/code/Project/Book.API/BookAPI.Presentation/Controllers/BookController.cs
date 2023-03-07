@@ -11,9 +11,11 @@ namespace BookAPI.API.Controllers
     public class BookController : ControllerBase
     {
         private readonly IBookRepository _bookRepository;
-        public BookController(IBookRepository bookRepository)
+        private readonly ICRUDRepository<Book> _crudRepository;
+        public BookController(IBookRepository bookRepository, ICRUDRepository<Book> crudRepository)
         {
             _bookRepository = bookRepository;
+            _crudRepository = crudRepository;
         }
 
         [HttpGet]
@@ -21,8 +23,7 @@ namespace BookAPI.API.Controllers
         {
             try
             {
-                IEnumerable<Book> books = await _bookRepository.GetBooksAsync();
-                //return Ok(books);
+                IEnumerable<Book> books = await _crudRepository.GetAllAsync();
                 return Ok(JsonConvert.SerializeObject(books));
             }
             catch (Exception ex)
@@ -36,7 +37,7 @@ namespace BookAPI.API.Controllers
         {
             try
             {
-                Book book = await _bookRepository.GetBookByIdAsync(id);
+                Book book = await _crudRepository.GetByIdAsync(id);
                 if (book == null)
                 {
                     return NotFound("book not found");
@@ -106,7 +107,7 @@ namespace BookAPI.API.Controllers
         {
             try
             {
-                int result = await _bookRepository.DeleteBookAsync(id);
+                int result = await _crudRepository.DeleteAsync(id);
                 if (result == 0)
                 {
                     return BadRequest("book dosen't deleted successfully");

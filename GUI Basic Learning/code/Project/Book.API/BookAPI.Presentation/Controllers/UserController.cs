@@ -11,10 +11,26 @@ namespace BookAPI.API.Controllers
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
+        private readonly ICRUDRepository<User> _crudRepository;
 
-        public UserController(IUserRepository userRepository)
+        public UserController(IUserRepository userRepository, ICRUDRepository<User> crudRepository)
         {
             _userRepository = userRepository;
+            _crudRepository = crudRepository;
+        }
+
+        [HttpGet]
+        public async Task<ActionResult<IEnumerable<User>>> GetBooks()
+        {
+            try
+            {
+                IEnumerable<User> users = await _crudRepository.GetAllAsync();
+                return Ok(JsonConvert.SerializeObject(users));
+            }
+            catch (Exception ex)
+            {
+                return BadRequest(ex.Message);
+            }
         }
 
         [HttpGet("{id:int}")]
@@ -22,7 +38,7 @@ namespace BookAPI.API.Controllers
         {
             try
             {
-                User user = await _userRepository.GetUserByIdAsync(id);
+                User user = await _crudRepository.GetByIdAsync(id);
                 if (user == null)
                 {
                     return NotFound("User not found");
@@ -144,6 +160,24 @@ namespace BookAPI.API.Controllers
                 {
                     return StatusCode(409, "email already exist");
                 }
+                return BadRequest(ex.Message);
+            }
+        }
+
+        [HttpDelete("{id:int}")]
+        public async Task<ActionResult<string>> DeleteUser([FromRoute] int id)
+        {
+            try
+            {
+                int result = await _crudRepository.DeleteAsync(id);
+                if (result == 0)
+                {
+                    return BadRequest("user dosen't deleted successfully");
+                }
+                return Ok("user deleted successfully");
+            }
+            catch (Exception ex)
+            {
                 return BadRequest(ex.Message);
             }
         }

@@ -10,3 +10,15 @@ D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\BookAPI.Domai
 D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\refint\BookAPI.Domain.dll
 D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\BookAPI.Domain.pdb
 D:\Dhruvil Dobariya - 335\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\ref\BookAPI.Domain.dll
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\bin\Debug\net7.0\BookAPI.Domain.deps.json
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\bin\Debug\net7.0\BookAPI.Domain.dll
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\bin\Debug\net7.0\BookAPI.Domain.pdb
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\BookAPI.Domain.csproj.AssemblyReference.cache
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\BookAPI.Domain.GeneratedMSBuildEditorConfig.editorconfig
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\BookAPI.Domain.AssemblyInfoInputs.cache
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\BookAPI.Domain.AssemblyInfo.cs
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\BookAPI.Domain.csproj.CoreCompileInputs.cache
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\BookAPI.Domain.dll
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\refint\BookAPI.Domain.dll
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\BookAPI.Domain.pdb
+D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Domain\obj\Debug\net7.0\ref\BookAPI.Domain.dll

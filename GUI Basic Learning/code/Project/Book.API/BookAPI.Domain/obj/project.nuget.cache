@@ -1,8 +1,8 @@
 {
   "version": 2,
-  "dgSpecHash": "FDRIR+WhxiRDhWPByoxNupA6zZTRBwgpDt2zCK9UmQtHgtXGUYrRlpAkEQ2u7K9eruChEYIC07afHqXWJUwNQw==",
+  "dgSpecHash": "ST+vT40WwpgCDdONQXkbekcvbjygdVfBWrSS3Cn4O/6g5VBmgrq9l2EFRkKThZOyhouXS0Cd6zCh5Lsc0GBZ0w==",
   "success": true,
-  "projectFilePath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj",
+  "projectFilePath": "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj",
   "expectedPackageFiles": [
     "C:\\Users\\Dhruvil.D\\.nuget\\packages\\dapper\\2.0.123\\dapper.2.0.123.nupkg.sha512",
     "C:\\Users\\Dhruvil.D\\.nuget\\packages\\google.protobuf\\3.21.9\\google.protobuf.3.21.9.nupkg.sha512",

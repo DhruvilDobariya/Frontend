@@ -80,38 +80,6 @@ namespace BookAPI.Repositories.Services
         //}
         #endregion
 
-        #region GetUserById
-        /// <summary>
-        /// give user details based on id
-        /// </summary>
-        /// <param name="id">id of user</param>
-        /// <returns>object of user</returns>
-        public async Task<User> GetUserByIdAsync(int id)
-        {
-            try
-            {
-                if (_connection.State != ConnectionState.Open)
-                    _connection.Open();
-
-                User user = await _connection.QuerySingleOrDefaultAsync<User>("Select * from User where Id = " + id);
-
-                if (_connection.State == ConnectionState.Open)
-                    _connection.Close();
-
-                return user;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                if (_connection.State == ConnectionState.Open)
-                    _connection.Close();
-            }
-        }
-        #endregion
-
         #region RegisterUser
         /// <summary>
         /// This method is used for register new user.

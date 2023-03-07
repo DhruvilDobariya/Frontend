@@ -2161,11 +2161,11 @@
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\BookAPI.Repositories.csproj",
+      "projectUniqueName": "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\BookAPI.Repositories.csproj",
       "projectName": "BookAPI.Repositories",
-      "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\BookAPI.Repositories.csproj",
+      "projectPath": "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\BookAPI.Repositories.csproj",
       "packagesPath": "C:\\Users\\Dhruvil.D\\.nuget\\packages\\",
-      "outputPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\obj\\",
+      "outputPath": "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Repositories\\obj\\",
       "projectStyle": "PackageReference",
       "fallbackFolders": [
         "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
@@ -2187,8 +2187,8 @@
         "net7.0": {
           "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj": {
-              "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj"
+            "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj": {
+              "projectPath": "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj"
             }
           }
         }
