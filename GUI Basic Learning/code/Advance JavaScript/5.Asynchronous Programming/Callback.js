@@ -21,5 +21,12 @@ function addStudent(student, callback){
         callback();
     },2000)
 }
-
 addStudent({id: 3, name: "Bhargav Vachhani"},getStudents);
+
+// function addStudent(student){
+//     setTimeout(()=>{
+//         students.push(student);
+//         getStudents();
+//     },2000)
+// }
+// addStudent({id: 3, name: "Bhargav Vachhani"});

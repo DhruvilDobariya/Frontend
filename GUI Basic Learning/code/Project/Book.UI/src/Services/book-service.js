@@ -3,6 +3,9 @@ export function getBooks(){
     return Promise.resolve($.get({
         url: baseUrl + "api/Book",
         data: {},
+        headers: {
+            "Authorization" : "Bearer " + sessionStorage.getItem("token")
+        }
         // type: "json"
         // success: function(data){
         //     rowdata = JSON.parse(data);
@@ -33,7 +36,10 @@ export function getBooks(){
 export async function getBookById(id){
     const data = await $.getJSON({
         type: "GET",
-        url: baseUrl + "api/Book/" + id
+        url: baseUrl + "api/Book/" + id,
+        headers: {
+            "Authorization" : "Bearer " + sessionStorage.getItem("token")
+        }
     });
     return data;
 }
@@ -46,7 +52,8 @@ export async function addBook(book){
         dataType: "json",
         headers: { 
             'Accept': 'application/json',
-            'Content-Type': 'application/json' 
+            'Content-Type': 'application/json',
+            "Authorization" : "Bearer " + sessionStorage.getItem("token")
         }
     })
     return data;
@@ -59,7 +66,8 @@ export async function editBook(book){
         data: JSON.stringify(book),
         headers: { 
             'Accept': 'application/json',
-            'Content-Type': 'application/json' 
+            'Content-Type': 'application/json',
+            "Authorization" : "Bearer " + sessionStorage.getItem("token")
         }
     })
     return data;
@@ -69,7 +77,10 @@ export function deleteBook(id){
     return $.ajax({
         type: "DELETE",
         url: baseUrl + "api/Book/" + id,
-        data: {}
+        data: {},
+        headers:{
+            "Authorization" : "Bearer " + sessionStorage.getItem("token")
+        }
     });
 }
 

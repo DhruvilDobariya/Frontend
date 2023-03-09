@@ -4,12 +4,13 @@ export class UserService{
     validateUser(login){
         return $.ajax({
             type: "POST",
-            url: this.#baseURL + "api/User/ValidateUser",
+            url: this.#baseURL + "api/User/Authenticate",
             data: JSON.stringify(login),
             dataType: "json",
             headers:{
                 'accept': 'text/plain',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Authorization" : "Bearer " + sessionStorage.getItem("token")
             }
         });
     }
@@ -20,7 +21,8 @@ export class UserService{
             data: {},
             dataType: "json",
             headers:{
-                'accept': 'text/plain'
+                'accept': 'text/plain',
+                "Authorization" : "Bearer " + sessionStorage.getItem("token")
             }
         });
     }
@@ -31,7 +33,8 @@ export class UserService{
             data: JSON.stringify(user),
             headers:{
                 'accept': 'text/plain',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Authorization" : "Bearer " + sessionStorage.getItem("token")
             }
         });
     }
@@ -42,7 +45,8 @@ export class UserService{
             data: JSON.stringify(user),
             headers:{
                 'accept': 'text/plain',
-                'Content-Type': 'application/json'
+                'Content-Type': 'application/json',
+                "Authorization" : "Bearer " + sessionStorage.getItem("token")
             }
         })
     }

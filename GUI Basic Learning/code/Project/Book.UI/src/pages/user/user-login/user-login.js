@@ -49,10 +49,18 @@ function userLogin(login){
     const userValidate = userService.validateUser(login);
     userValidate.done(function(data){
         toastr.success(data.Name + " logged in successfully");
-        sessionStorage.setItem("id", data.Id);
-        sessionStorage.setItem("name", data.Name);
-        sessionStorage.setItem("email", data.email);
-        sessionStorage.setItem("password", data.Password);
+        if(document.querySelector("#RememberMe").checked){
+            localStorage.setItem("id", data.Id);
+            localStorage.setItem("name", data.Name);
+            localStorage.setItem("email", data.Email);
+            localStorage.setItem("token", data.Token);
+        }
+        else{
+            sessionStorage.setItem("id", data.Id);
+            sessionStorage.setItem("name", data.Name);
+            sessionStorage.setItem("email", data.Email);
+            sessionStorage.setItem("token", data.Token);
+        }
         setTimeout(()=>{
             window.location.href = "../../home/home.html";
         },2000);

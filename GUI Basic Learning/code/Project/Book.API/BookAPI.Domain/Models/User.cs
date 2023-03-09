@@ -14,7 +14,7 @@ namespace BookAPI.Domain.Models
 
         [Required(ErrorMessage = "Please eneter email")]
         [DataType(DataType.EmailAddress, ErrorMessage = "Please enter valid email")]
-        public string email { get; set; } = null!;
+        public string Email { get; set; } = null!;
 
         [Required(ErrorMessage = "Please eneter password")]
         [DataType(DataType.Password, ErrorMessage = "Please enter valid password")]

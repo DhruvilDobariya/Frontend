@@ -1,5 +1,6 @@
 ﻿using BookAPI.Domain.Models;
 using BookAPI.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -7,7 +8,7 @@ namespace BookAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
-    //[Authorize]
+    [Authorize]
     public class BookController : ControllerBase
     {
         private readonly IBookRepository _bookRepository;

@@ -1,6 +1,7 @@
 ﻿using BookAPI.Domain.Models;
 using BookAPI.Domain.ViewModels;
 using BookAPI.Repositories;
+using Microsoft.AspNetCore.Authorization;
 using Microsoft.AspNetCore.Mvc;
 using Newtonsoft.Json;
 
@@ -8,6 +9,7 @@ namespace BookAPI.API.Controllers
 {
     [Route("api/[controller]")]
     [ApiController]
+    [Authorize]
     public class UserController : ControllerBase
     {
         private readonly IUserRepository _userRepository;
@@ -51,47 +53,21 @@ namespace BookAPI.API.Controllers
             }
         }
 
-        //[AllowAnonymous]
-        //[HttpPost("Authonicate")]
-        //public ActionResult<Tokens> Authonticate([FromBody] Login login)
-        //{
-        //    try
-        //    {
-
-        //        if (ModelState.IsValid)
-        //        {
-        //            var tocken = _userRepository.Authonticate(login);
-        //            if (tocken == null)
-        //            {
-        //                return BadRequest("Invalid email or password");
-        //            }
-        //            return Ok(tocken);
-        //        }
-        //        else
-        //        {
-        //            return BadRequest(ModelState);
-        //        }
-        //    }
-        //    catch (Exception ex)
-        //    {
-        //        return BadRequest(ex.Message);
-        //    }
-        //}
-
-        [HttpPost("ValidateUser")]
-        public async Task<ActionResult<User>> ValidateUser([FromBody] Login login)
+        [AllowAnonymous]
+        [HttpPost("Authenticate")]
+        public ActionResult<Tokens> Authonticate([FromBody] Login login)
         {
             try
             {
 
                 if (ModelState.IsValid)
                 {
-                    User user = await _userRepository.ValidateUserAsync(login);
-                    if (user == null)
+                    var tocken = _userRepository.Authenticate(login);
+                    if (tocken == null)
                     {
                         return BadRequest("Invalid email or password");
                     }
-                    return Ok(JsonConvert.SerializeObject(user));
+                    return Ok(JsonConvert.SerializeObject(tocken));
                 }
                 else
                 {

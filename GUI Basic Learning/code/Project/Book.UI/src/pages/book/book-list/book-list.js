@@ -1,7 +1,7 @@
 import { getBooks, deleteBook } from "../../../Services/book-service.js";
 
 $(document).ready(function(){
-    if(sessionStorage.getItem("id") == null){
+    if(sessionStorage.getItem("id") == null && localStorage.getItem("id") == null){
         window.location.href = "../../user/user-login/user-login.html";
     }
     else{
@@ -16,8 +16,14 @@ $(document).ready(function(){
 
         $(document).ready(function(){
             $("#btnLogOut").click(function(){
-                toastr.success(sessionStorage.getItem("name") + " logged out successfully");
-                sessionStorage.clear();
+                if(localStorage.getItem("id") != null){
+                    toastr.success(localStorage.getItem("name") + " logged out successfully");
+                    localStorage.clear();
+                }
+                else{
+                    toastr.success(sessionStorage.getItem("name") + " logged out successfully");
+                    sessionStorage.clear();
+                }
                 setTimeout(()=>{
                     window.location.href = "../../user/user-login/user-login.html";
                 },2000);

@@ -87,7 +87,7 @@ function fillData(){
 
     getUserByIdPromise.done(function(data){
         $("#Name").val(data.Name);
-        $("#Email").val(data.email);
+        $("#Email").val(data.Email);
         $("#Password").val(data.Password);
         $("#ConfirmPassword").val(data.Password);
     });

@@ -2,8 +2,12 @@
 using BookAPI.Domain.ViewModels;
 using Dapper;
 using Microsoft.Extensions.Configuration;
+using Microsoft.IdentityModel.Tokens;
 using MySql.Data.MySqlClient;
 using System.Data;
+using System.IdentityModel.Tokens.Jwt;
+using System.Security.Claims;
+using System.Text;
 
 namespace BookAPI.Repositories.Services
 {
@@ -28,56 +32,56 @@ namespace BookAPI.Repositories.Services
         }
         #endregion
 
-        #region Authonticate
+        #region Authenticate
         /// <summary>
         /// Get Jwt token
         /// </summary>
         /// <param name = "login" > login object of Login class which contains email and password of user</param>
         /// <returns>It gives JWT token</returns>
-        //public Tokens Authonticate(Login login)
-        //{
-        //    try
-        //    {
-        //        if (_connection.State != ConnectionState.Open)
-        //            _connection.Open();
+        public Tokens Authenticate(Login login)
+        {
+            try
+            {
+                if (_connection.State != ConnectionState.Open)
+                    _connection.Open();
 
-        //        User user = _connection.QuerySingleOrDefault<User>("Select * from User where Email = @Email And Password = @Password", login);
+                User user = _connection.QuerySingleOrDefault<User>("Select * from User where Email = @Email And Password = @Password", login);
 
-        //        if (_connection.State == ConnectionState.Open)
-        //            _connection.Close();
+                if (_connection.State == ConnectionState.Open)
+                    _connection.Close();
 
-        //        if (user != null)
-        //        {
-        //            var tockenHandler = new JwtSecurityTokenHandler();
-        //            var tockenKey = Encoding.UTF8.GetBytes(_configuration["JWT:Key"]);
+                if (user != null)
+                {
+                    var tockenHandler = new JwtSecurityTokenHandler();
+                    var tockenKey = Encoding.UTF8.GetBytes(_configuration["JWT:Key"]);
 
-        //            var tockenDescriptior = new SecurityTokenDescriptor()
-        //            {
-        //                Subject = new ClaimsIdentity(
-        //                    new Claim[]
-        //                    {
-        //                        new Claim(ClaimTypes.Name, user.Name)
-        //                    }
-        //                ),
-        //                Expires = DateTime.UtcNow.AddMinutes(5),
-        //                SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tockenKey), SecurityAlgorithms.HmacSha256Signature)
-        //            };
+                    var tockenDescriptior = new SecurityTokenDescriptor()
+                    {
+                        Subject = new ClaimsIdentity(
+                            new Claim[]
+                            {
+                                new Claim(ClaimTypes.Name, user.Name)
+                            }
+                        ),
+                        //Expires = DateTime.UtcNow.AddMinutes(5),
+                        SigningCredentials = new SigningCredentials(new SymmetricSecurityKey(tockenKey), SecurityAlgorithms.HmacSha256Signature)
+                    };
 
-        //            var tocken = tockenHandler.CreateToken(tockenDescriptior);
-        //            return new Tokens { Token = tockenHandler.WriteToken(tocken) };
-        //        }
-        //        return null;
-        //    }
-        //    catch (Exception)
-        //    {
-        //        throw;
-        //    }
-        //    finally
-        //    {
-        //        if (connection.State == ConnectionState.Open)
-        //            connection.Close();
-        //    }
-        //}
+                    var tocken = tockenHandler.CreateToken(tockenDescriptior);
+                    return new Tokens { Token = tockenHandler.WriteToken(tocken), Id = user.Id, Name = user.Name, Email = user.Email };
+                }
+                return null;
+            }
+            catch (Exception)
+            {
+                throw;
+            }
+            finally
+            {
+                if (_connection.State == ConnectionState.Open)
+                    _connection.Close();
+            }
+        }
         #endregion
 
         #region RegisterUser
@@ -131,38 +135,6 @@ namespace BookAPI.Repositories.Services
                     _connection.Close();
 
                 return result;
-            }
-            catch (Exception)
-            {
-                throw;
-            }
-            finally
-            {
-                if (_connection.State == ConnectionState.Open)
-                    _connection.Close();
-            }
-        }
-        #endregion
-
-        #region ValidateUser
-        /// <summary>
-        /// Get Jwt token
-        /// </summary>
-        /// <param name = "login" > login object of Login class which contains email and password of user</param>
-        /// <returns>It gives object of user with detail</returns>
-        public async Task<User> ValidateUserAsync(Login login)
-        {
-            try
-            {
-                if (_connection.State != ConnectionState.Open)
-                    _connection.Open();
-
-                User user = await _connection.QuerySingleOrDefaultAsync<User>("Select * from User where Email = @Email And Password = @Password", login);
-
-                if (_connection.State == ConnectionState.Open)
-                    _connection.Close();
-
-                return user;
             }
             catch (Exception)
             {

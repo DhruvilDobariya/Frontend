@@ -37,13 +37,15 @@ builder.Services.AddCors();
 //    o.SaveToken = true;
 //    o.TokenValidationParameters = new TokenValidationParameters()
 //    {
-//        ValidateIssuerSigningKey = true,
-//        ValidIssuer = builder.Configuration["JWT:Issuer"],
-//        ValidAudience = builder.Configuration["JWT:Audience"],
-//        IssuerSigningKey = new SymmetricSecurityKey(key),
 //        ValidateAudience = false,
 //        ValidateIssuer = false,
 //        ValidateLifetime = true
+//        ValidateIssuerSigningKey = true,
+//
+//        ValidIssuer = builder.Configuration["JWT:Issuer"],
+//        ValidAudience = builder.Configuration["JWT:Audience"],
+//
+//        IssuerSigningKey = new SymmetricSecurityKey(key),
 //    };
 //});
 var app = builder.Build();
