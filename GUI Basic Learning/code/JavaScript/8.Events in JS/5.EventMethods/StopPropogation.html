@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div id="div2" style="height: 200px; width: 400px; background: gray; padding: 1em;">
+        For stopPropagation
+        <p id="p2" style="padding: 1.2em; background: green;">
+            Paragraph Content
+            <br>
+            <span id="span1" style="background: yellow;">Span Content</span>
+        </p>
+    </div>
+    <div id="div3" style="height: 200px; width: 400px; background: gray; padding: 1em;">
+        For stopImmediatePropagation
+    </div>
+    <script>
+        // stopPropagation
+        document.querySelector("#span1").addEventListener("click", (event)=>{
+            alert("Span clicked");
+            event.stopPropagation();
+            console.log(event.isPropagationStopped());
+            // stop function of parents.
+            // here we can also use stopImmediatePropagation.
+        });
+        document.querySelector("#p2").addEventListener("click", ()=>{
+            alert("Paragraph clicked");
+        });
+        document.querySelector("#div2").addEventListener("click", ()=>{
+            alert("div clicked");
+        });
+        
+        // stopImmediatePropagation
+        document.querySelector("#div3").addEventListener("click", (event)=>{
+            alert("handler 1 exicuted");
+            event.stopImmediatePropagation();
+            console.log(event.isImmediatePropagationStopped());
+            // stop next function which bind with this event as well as stop function of parents
+            // here we can't use stopPropagation
+        });
+        document.querySelector("#div3").addEventListener("click", ()=>{
+            alert("handler 2 exicuted");
+        });
+        document.querySelector("#div3").addEventListener("click", ()=>{
+            alert("handler 3 exicuted");
+        });
+
+        // Diffrence between stopPropagation and stopImmediatePropagation
+        // Say, if you have a <table>, with <tr>, and then <td>. Now, let's say you set 3 event handlers for the <td> element, then if you do event.stopPropagation() in the first event handler you set for <td>, then all event handlers for <td> will still run, but the event just won't propagate to <tr> or <table> (and won't go up and up to <body>, <html>, document, and window).
+
+        // Now, however, if you use event.stopImmediatePropagation() in your first event handler, then, the other two event handlers for <td> WILL NOT run, and won't propagate up to <tr>, <table> (and won't go up and up to <body>, <html>, document, and window).
+    </script>
+</body>
+</html>

@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <div>
+        <button>Click me with special key</button>
+    </div>
+    <script>
+        // The getModifierState() method returns true if the specified modifier key was pressed, or activated.
+        // Modifier keys that are activated only when they are being pressed down:
+        // Alt
+        // AltGraph
+        // Control
+        // Meta
+        // Shift
+
+        // Modifier keys that are activated when they are clicked, and deactivated when they are clicked again:
+        // CapsLock
+        // NumLock
+        // ScrollLock
+
+        document.querySelector("button").addEventListener("click", (e)=>{
+            console.log(e.getModifierState("Shift"));
+        })
+    </script>
+</body>
+</html>

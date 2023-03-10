@@ -1,0 +1,26 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+    <div>
+        <input type="text">
+    </div>
+<body>
+    <script>
+        window.onkeypress = (e)=>{
+            e.stopPropagation()
+        }
+        document.querySelector("input").addEventListener("keypress", (e)=>{
+            
+            if(e.ctrlKey && e.key.toLowerCase() == "j"){
+                console.log(e.shiftKey + " " + e.key)
+            }
+            
+        });
+    </script>
+</body>
+</html>
