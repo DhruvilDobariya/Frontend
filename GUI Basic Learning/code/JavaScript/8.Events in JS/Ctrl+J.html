@@ -11,13 +11,15 @@
     </div>
 <body>
     <script>
-        window.onkeypress = (e)=>{
-            e.stopPropagation()
-        }
-        document.querySelector("input").addEventListener("keypress", (e)=>{
-            
+        // window.onkeydown = (e)=>{
+        //     e.preventDefault();
+        // }
+        document.querySelector("input").addEventListener("keydown", (e)=>{
+            // console.log(e.which);
+            // console.log(e.keyCode);
             if(e.ctrlKey && e.key.toLowerCase() == "j"){
-                console.log(e.shiftKey + " " + e.key)
+                e.preventDefault();
+                console.log(e.ctrlKey + " " + e.key)
             }
             
         });

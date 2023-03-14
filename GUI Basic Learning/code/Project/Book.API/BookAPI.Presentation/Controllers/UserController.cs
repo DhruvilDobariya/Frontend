@@ -80,6 +80,7 @@ namespace BookAPI.API.Controllers
             }
         }
 
+        [AllowAnonymous]
         [HttpPost("RegisterUser")]
         public async Task<ActionResult<User>> RegisterUser([FromBody] User user)
         {

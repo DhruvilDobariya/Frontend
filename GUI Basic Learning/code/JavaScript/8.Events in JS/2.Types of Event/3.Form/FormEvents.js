@@ -1,9 +1,16 @@
 function onBlur(element){
     element.parentElement.lastElementChild.innerText = element.previousElementSibling.innerText + " blured!";
+    // also use focusout
 }
 
 function onFocus(element){
     element.parentElement.lastElementChild.innerText = element.previousElementSibling.innerText + " focused!";
+        // also use focusin
+}
+
+function onBeforeInput(element){
+    console.log("You input something...");
+    // it occured befor input
 }
 
 function onInput(element){
@@ -27,14 +34,11 @@ function onChange(element, flag){
     }
 }
 
+
 function onReset(){
     alert("Form reset successfully!");
 }
 
 function onSubmit(){
     alert("Form submited successfully!");
-}
-
-window.oncontextmenu = ()=>{
-    alert("context manu opened");
 }

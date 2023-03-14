@@ -5,17 +5,14 @@
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
-    <style>
-        div{
-            margin: 2em 0.5em;
-        }
-    </style>
-    <script src="FrameEvents.js"></script>
 </head>
 <body>
-    <div>
-        <a href="#">Click me</a>
-        <input type="text" value="">
-    </div>
+    <a href="#">Click me</a>
+    <script>
+        window.onhashchange = (e)=>{
+            console.log(e.oldURL);
+            console.log(e.newURL);
+        }
+    </script>
 </body>
 </html>

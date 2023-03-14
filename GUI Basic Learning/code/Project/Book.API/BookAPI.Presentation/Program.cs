@@ -1,7 +1,9 @@
 using BookAPI.Repositories;
 using BookAPI.Repositories.Services;
+using Google.Protobuf.WellKnownTypes;
 using Microsoft.AspNetCore.Authentication.JwtBearer;
 using Microsoft.IdentityModel.Tokens;
+using Microsoft.OpenApi.Models;
 using System.Text;
 
 var builder = WebApplication.CreateBuilder(args);
@@ -18,6 +20,8 @@ builder.Services.AddScoped<IUserRepository, UserRepository>();
 builder.Services.AddScoped(typeof(ICRUDRepository<>), typeof(CRUDRepository<>));
 
 builder.Services.AddCors();
+
+
 
 builder.Services.AddAuthentication(options =>
 {

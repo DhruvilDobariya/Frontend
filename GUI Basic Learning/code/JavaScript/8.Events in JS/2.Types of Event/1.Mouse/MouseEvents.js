@@ -34,6 +34,10 @@ function onMouseWheel(){
     console.log("Mouse Wheel event occurred!");
 }
 
+function onContextMenu(){
+    console.log("Context Menu event occurred!");  
+}
+
 function MouseOver(element){
     element.children[0].innerHTML = "Mouse Over occurred : " + (parseInt(element.children[0].innerHTML.split(":")[1]) + 1);
 }
@@ -49,3 +53,4 @@ function MouseOut(element){
 function MouseLeave(element){
     element.children[0].innerHTML = "Mouse Over occurred : " + (parseInt(element.children[0].innerHTML.split(":")[1]) + 1);
 }
+

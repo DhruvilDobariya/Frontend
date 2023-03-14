@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <style>
+        #Container{
+            /* height: 100px;
+            width: 200px; */
+            background: gray;
+            padding: 25px;
+        }
+        #Node1, #Node2{
+            height: 250px;
+            width: 250px;
+            background: aqua;
+            padding: 25px;
+            margin: 10px;
+        }
+        #Node1SubNode1, #Node1SubNode2, #Node2SubNode1, #Node2SubNode2{
+            height: 50px;
+            width: 200px;
+            background: black;
+            padding: 20px;
+            margin: 10px;
+        }
+    </style>
+</head>
+<body>
+    <div id="Container">
+        <div id="Node1">
+            <div id="Node1SubNode1">
+                <input type="text" name="" id="Name1">
+            </div>
+            <div id="Node1SubNode2">
+                <input type="button" value="click me" name="" id="Submit1">
+            </div>
+        </div>
+        <div id="Node2">
+            <div id="Node2SubNode1">
+                <input type="text" name="" id="Name2">
+            </div>
+            <div id="Node2SubNode2">
+                <input type="button" value="click me" name="" id="Submit2">
+            </div>
+        </div>
+    </div>
+    <div>
+        <span></span>
+    </div>
+    <script>
+        document.querySelector("#Container").addEventListener("click", (e)=>{
+            let elementNode = document.createElement("div");
+            let element = e.target.cloneNode(true); // arg1: want you also clone children or not
+            elementNode.appendChild(element);
+            document.querySelector("span").innerText = elementNode.innerHTML;
+        });
+    </script>
+</body>
+</html>

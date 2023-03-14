@@ -1,11 +1,11 @@
-function onCopy(){
+function onCopy(e){
     console.log("oncopy called");
 }
 
-function onPaste(){
+function onPaste(e){
     console.log("onpaste called");
 }
 
-function onCut(){
+function onCut(e){
     console.log("oncut called");
 }

@@ -16,9 +16,9 @@
     <div>
         <form action="" onreset="onReset()" onsubmit="onSubmit()">
             <div>
-                <h2>Blur</h2>
+                <h2>Blur or Focus out</h2>
                 <label for="Blur1">Field 1:</label>
-                <input type="text" name="" id="Blur1" onblur="onBlur(this)">
+                <input type="text" name="" id="Blur1" onfocusout="onBlur(this)">
 
                 <label for="Blur2">Field 2:</label>
                 <input type="text" name="" id="Blur2" onblur="onBlur(this)">
@@ -27,9 +27,10 @@
             </div>
 
             <div>
-                <h2>Focus</h2>
+                <h2>Focus or Focus in</h2>
                 <label for="Focus1">Field 1:</label>
-                <input type="text" name="" id="Focus1" onfocus="onFocus(this)">
+                <input type="text" name="" id="Focus1" onfocusin="onFocus(this)">
+                <!-- focusin and focusout can use in form but focus and blur not, because focusin and focusout occurred bubbling, so when we focus on any element of form, that time form will focusin. -->
 
                 <label for="Focus2">Field 2:</label>
                 <input type="text" name="" id="Focus2" onfocus="onFocus(this)">
@@ -40,7 +41,7 @@
             <div>
                 <h2>Input</h2>
                 <label for="Input">Field 1:</label>
-                <input type="text" name="" id="Input" oninput="onInput(this)">
+                <input type="text" name="" id="Input" onbeforeinput="onBeforeInput(this)" oninput="onInput(this)">
                 
                 <label for=""></label>
             </div>
