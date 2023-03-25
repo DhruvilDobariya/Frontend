@@ -24,7 +24,7 @@ var StudentPrototype = function(){
     }
 
     // method
-    StudentPrototype.prototype.getStudent = function(){
+    StudentPrototype.prototype.getStudent = function(){ // don't use arrow function
         return {id: this.id, name: this.name};
     }
 
@@ -36,4 +36,7 @@ console.log(studentOG.getStudent());
 
 let studentPrototype = new StudentPrototype(2, "Bhargav Vachhani");
 console.log(studentPrototype.getStudent());
+
+// we use __proto__ with object and prototype with class
+// user.__proto__ and User.prototype
 

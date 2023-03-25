@@ -24,6 +24,7 @@
             alert("Span clicked");
             event.stopPropagation();
             console.log(event.isPropagationStopped());
+            // it stop event propogation to parent if bubling or child if capturing.
             // stop function of parents.
             // here we can also use stopImmediatePropagation.
         });
@@ -39,6 +40,7 @@
             alert("handler 1 exicuted");
             event.stopImmediatePropagation();
             console.log(event.isImmediatePropagationStopped());
+            // it contains same functionality of stopPropogation as well as it stop propogate event to the next fuction of it self's.
             // stop next function which bind with this event as well as stop function of parents
             // here we can't use stopPropagation
         });

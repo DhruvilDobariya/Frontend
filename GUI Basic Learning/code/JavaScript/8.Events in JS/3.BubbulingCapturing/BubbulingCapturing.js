@@ -6,6 +6,7 @@ window.onload = () => {
     document.getElementById("Child1").addEventListener("click", ()=>{
         console.log("Child of bubbuling triggerd!");
     });
+    // Event proogate child to parent
     
     // Capturing
     document.getElementById("Parent2").addEventListener("click", ()=>{
@@ -14,4 +15,5 @@ window.onload = () => {
     document.getElementById("Child2").addEventListener("click", ()=>{
         console.log("Child of capturing triggerd!");
     }, true);
+    // Event propogate parent to child
 }

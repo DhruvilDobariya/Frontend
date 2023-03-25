@@ -21,7 +21,7 @@ class Student extends Person{
 
     constructor(personId, firstName, lastName, sem, collage){
         super(personId, firstName, lastName);
-        // if we don't call base class constructor then it give erro like,
+        // if we don't call base class constructor then it give error like,
         // Must call super constructor in derived class before accessing 'this' or returning from derived constructor
         // super.personId = 2;
 

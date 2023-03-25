@@ -229,6 +229,7 @@ mouseleave - only triggerd element
 mouseover - triggerd child as well as element
 mouseout - triggerd child as well as element
 onmousewheel
+oncontextmanu
 
 Keyboard:
 keyup - n
@@ -238,14 +239,60 @@ keypress - n-1
 Form:
 onsubmit
 onreset
-onfocus
-onblur
+onfocus - It dont' propogate event
+onblur - - It dont' propogate event
+onfocusin - It propogate event
+onfocusout - It propogate event
 onchange
 onselect
+oninput
 
 Frame:
 onload
 onabort
 onerro
+onundload
+onbeforunlod
+onbeforprint
+onafterprint
+onscroll
 onresize
+onoffline
+ononline
+onpopstate
+onhashchange
+onreadystatechange
+onpageshow
+onpagehide
+
+media:
+onplay
+onplaying
+onpause
+onended
+oncanplay
+oncanplaythrogh
+onloaddata
+onloadmetadata
+onvolumechange
+ontimeupdate
+onprogress
+onwaiting
+onratechange
+onstalled - media is moved some other location son browser can't find it.
+onemptied - browser can't fetch media
+
+drag:
+ondrag
+ondragstrat
+ondragend
+ondeagover
+ondragenter
+ondragleave
+ondrop
+
+clipboard:
+oncut
+oncopy
+onpast
 
