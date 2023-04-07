@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <p>Keys Method</p>
+            <button id="btnAddAll">Add All</button>
+            <button id="btnShowAll">Show All</button>
+        </div>
+        <script>
+            document.querySelector("#btnAddAll").addEventListener("click", () => {
+                caches.open("v1").then(cache => {
+                    cache.addAll(["./Add.html", "AddAll.html"]);
+                });
+            });
+            document.querySelector("#btnShowAll").addEventListener("click", () => {
+                caches.open("v1").then(cache => {
+                    cache.keys().then(key => {
+                        key.forEach((element, index, array) => {
+                            console.log(element);
+                        });
+                    });
+                });
+            });
+        </script>
+    </body>
+</html>

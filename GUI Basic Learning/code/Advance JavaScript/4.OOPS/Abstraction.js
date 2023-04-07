@@ -1,14 +1,12 @@
-class AbstractClass{
-    constructor(){
+class AbstractClass {
+    constructor() {
         throw Error("You can't create instance of abstract class");
     }
 }
-class AbstractClass2{
-    constructor(){
+class AbstractClass2 {
+    constructor() {
         throw Error("You can't create instance of abstract class");
     }
 }
 
-class Student extends AbstractClass{
-
-}
+class Student extends AbstractClass {}

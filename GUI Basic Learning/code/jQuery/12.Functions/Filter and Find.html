@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+    <script>
+        $(document).ready(function(){
+            // filter work on particular selector
+            console.log($("p").filter(".intro"));
+            $("p").filter(".intro").css("background-color", "yellow");
+
+            // find work on children of selector
+            console.log($("p").filter(".intro"));
+            $(".content2").find(".intro").css("background-color", "yellow");
+        });
+    </script>
+</head>
+<body>
+    <div id="contant1">
+        <p>Contant 1</p>
+        <p class="intro">Contant 2</p>
+        <p class="intro">Contant 3</p>
+        <p>Contant 4</p>
+    </div>
+    <div id="content2">
+        <p>Contant 1</p>
+        <p class="intro">Contant 2</p>
+        <p class="intro">Contant 3</p>
+        <p>Contant 4</p>
+    </div>
+</body>
+</html>

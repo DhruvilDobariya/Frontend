@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <p>Delete Method</p>
+            <input type="text" id="txt" />
+            <button id="btnAdd">Add</button>
+            <button id="btnDelete">Delete</button>
+        </div>
+        <script>
+            document.querySelector("#btnAdd").addEventListener("click", () => {
+                caches.open("v1").then(cache => {
+                    cache.add(document.querySelector("#txt").value);
+                });
+            });
+            document.querySelector("#btnDelete").addEventListener("click", () => {
+                caches.open("v1").then(cache => {
+                    cache.delete(document.querySelector("#txt").value, { ignoreMethod: true, ignoreSearch: true, ignoreVary: true });
+                });
+            });
+        </script>
+    </body>
+</html>

@@ -1,40 +1,39 @@
 let students = [
     {
         id: 1,
-        name: "Dhruvil Dobariya"
+        name: 'Dhruvil Dobariya',
     },
     {
         id: 2,
-        name: "Dhaval Dobariya"
-    }
+        name: 'Dhaval Dobariya',
+    },
 ];
 
-function getStudents(){
-    setTimeout(()=>{
+function getStudents() {
+    setTimeout(() => {
         students.forEach(x => console.log(x));
-    },1000);
+    }, 1000);
 }
 
-function addStudent(student){
-    return new Promise((resolve, reject)=>{
-        setTimeout(()=>{
+function addStudent(student) {
+    return new Promise((resolve, reject) => {
+        setTimeout(() => {
             students.push(student);
             error = false;
-            if(!error){
-                resolve("Student added successfully");
+            if (!error) {
+                resolve('Student added successfully');
+            } else {
+                reject('Student not added successfully');
             }
-            else{
-                reject("Student not added successfully");
-            }
-        },2000);
+        }, 2000);
     });
 }
 
-addStudent({id: 3, name: "Bhargav Vachhani"})
-.then((message)=>{
-    console.log(message);
-    getStudents();
-})
-.catch((error)=>{
-    console.log(error);
-})
+addStudent({ id: 3, name: 'Bhargav Vachhani' })
+    .then(message => {
+        console.log(message);
+        getStudents();
+    })
+    .catch(error => {
+        console.log(error);
+    });

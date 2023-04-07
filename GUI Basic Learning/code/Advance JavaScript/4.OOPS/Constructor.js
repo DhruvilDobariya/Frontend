@@ -1,4 +1,4 @@
-class Student{
+class Student {
     id;
     name;
 
@@ -8,7 +8,7 @@ class Student{
 
     // A class may only have one constructor
 
-    constructor(id, name){
+    constructor(id, name) {
         this.id = id;
         this.name = name;
     }
@@ -16,6 +16,6 @@ class Student{
 
 // let student = new Student();
 
-let student = new Student(1, "Dhruvil Dobariya");
+let student = new Student(1, 'Dhruvil Dobariya');
 console.log(student.id);
 console.log(student.name);

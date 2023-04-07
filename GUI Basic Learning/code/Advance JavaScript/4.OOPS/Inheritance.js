@@ -1,25 +1,25 @@
-class Person{
+class Person {
     personId;
     firstName;
     lastName;
 
-    constructor(personId, firstName, lastName){
+    constructor(personId, firstName, lastName) {
         this.personId = personId;
         this.firstName = firstName;
         this.lastName = lastName;
     }
 
-    getPerson(){
-        console.log(this.personId + " " + this.firstName + " " + this.lastName);
+    getPerson() {
+        console.log(this.personId + ' ' + this.firstName + ' ' + this.lastName);
         // if we don't write this then it give error like lastName is not defined.
     }
 }
 
-class Student extends Person{
+class Student extends Person {
     sem;
     collage;
 
-    constructor(personId, firstName, lastName, sem, collage){
+    constructor(personId, firstName, lastName, sem, collage) {
         super(personId, firstName, lastName);
         // if we don't call base class constructor then it give error like,
         // Must call super constructor in derived class before accessing 'this' or returning from derived constructor
@@ -28,14 +28,24 @@ class Student extends Person{
         this.sem = sem;
         this.collage = collage;
     }
-    
-    getStudent(){
+
+    getStudent() {
         // super.getPerson();
         // console.log(super.firstName); // undefined why?
-        console.log(this.personId + " " + this.firstName + " " + this.lastName + " " + this.sem + " " + this.collage);
+        console.log(
+            this.personId +
+                ' ' +
+                this.firstName +
+                ' ' +
+                this.lastName +
+                ' ' +
+                this.sem +
+                ' ' +
+                this.collage
+        );
     }
 }
-let student = new Student(1, "Dhruvil", "Dobariya", 8, "Darshan");
+let student = new Student(1, 'Dhruvil', 'Dobariya', 8, 'Darshan');
 console.log(student.personId);
 console.log(student.collage);
 

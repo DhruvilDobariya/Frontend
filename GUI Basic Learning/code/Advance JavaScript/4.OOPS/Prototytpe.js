@@ -1,19 +1,19 @@
-class A{
-    x = {B,C}
-    method1(){
+class A {
+    x = { B, C };
+    method1() {
         this.x.B.prototype.method1();
         this.x.C.prototype.method1();
-        console.log("A");
+        console.log('A');
     }
 }
-class B{
-    method1(){
-        console.log("B");
+class B {
+    method1() {
+        console.log('B');
     }
 }
-class C{
-    method1(){
-        console.log("C");
+class C {
+    method1() {
+        console.log('C');
     }
 }
 

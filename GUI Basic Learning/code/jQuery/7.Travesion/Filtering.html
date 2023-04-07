@@ -13,6 +13,7 @@
             console.log($("#list").children().eq(3)); // it take index of array, return 4th children
             console.log($("#list").children().filter("#item4")); // return children which have item4 id
             console.log($("#list").children().not("#item4")); // return children which don't have item4 id
+            console.log($("#list").find("#item4")); // we don't want to traverse via children, we can directly find
         });
     </script>
 </head>

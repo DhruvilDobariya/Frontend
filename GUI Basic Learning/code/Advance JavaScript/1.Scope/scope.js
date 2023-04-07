@@ -2,7 +2,7 @@ function fun() {
     if (true) {
         var x = '1';
         let z = '3';
-        const w = '2'
+        const w = '2';
         y = 4;
     }
     console.log(x);

@@ -1,27 +1,27 @@
 let students = [
     {
         id: 1,
-        name: "Dhruvil Dobariya"
+        name: 'Dhruvil Dobariya',
     },
     {
         id: 2,
-        name: "Dhaval Dobariya"
-    }
+        name: 'Dhaval Dobariya',
+    },
 ];
 
-function getStudents(){
-    setTimeout(()=>{
+function getStudents() {
+    setTimeout(() => {
         students.forEach(x => console.log(x));
-    },1000);
+    }, 1000);
 }
 
-function addStudent(student, callback){
-    setTimeout(()=>{
+function addStudent(student, callback) {
+    setTimeout(() => {
         students.push(student);
         callback();
-    },2000)
+    }, 2000);
 }
-addStudent({id: 3, name: "Bhargav Vachhani"},getStudents);
+addStudent({ id: 3, name: 'Bhargav Vachhani' }, getStudents);
 
 // function addStudent(student){
 //     setTimeout(()=>{

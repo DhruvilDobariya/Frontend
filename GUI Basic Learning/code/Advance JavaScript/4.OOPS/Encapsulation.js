@@ -1,24 +1,23 @@
-class Student{
+class Student {
     #id;
     #name;
-    
-    getId(){
+
+    getId() {
         return this.#id;
     }
-    setId(id){
+    setId(id) {
         this.#id = id;
     }
-    getName(){
+    getName() {
         return this.#name;
     }
-    setName(name){
+    setName(name) {
         this.#name = name;
     }
 }
 
 let student = new Student();
 student.setId(1);
-student.setName("Dhruvil Dobariya");
+student.setName('Dhruvil Dobariya');
 console.log(student.getId());
 console.log(student.getName());
-

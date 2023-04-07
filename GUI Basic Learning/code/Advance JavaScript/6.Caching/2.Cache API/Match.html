@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+    </head>
+    <body>
+        <div>
+            <p>Match Method</p>
+            <button id="btnMatch">Match</button>
+        </div>
+        <script>
+            document.querySelector("#btnMatch").addEventListener("click", () => {
+                caches.open("v1").then(cache => {
+                    console.log(cache.match("./Add.html"));
+                    cache.match("./Add.html", { ignoreMethod: true, ignoreSearch: true, ignoreVary: true }).then(data => {
+                        console.log(data);
+                    });
+
+                    console.log(cache.match("./Edit.html"));
+                    cache.match("./Edit.html").then(data => {
+                        console.log(data);
+                    });
+                    // The match() method of the Cache interface returns a Promise that resolves to the Response associated with the first matching request in the Cache object. If no match is found, the Promise resolves to undefined.
+
+                    // Optinas:
+                    // It's optional.
+
+                    // ignoreSearch:
+                    // A boolean value that specifies whether to ignore the query string in the URL. For example, if set to true the ?value=bar part of http://foo.com/?value=bar would be ignored when performing a match. It defaults to false.
+
+                    // ignoreMethod:
+                    // A boolean value that, when set to true, prevents matching operations from validating the Request http method (normally only GET and HEAD are allowed.) It defaults to false.
+
+                    // ignoreVary:
+                    // A boolean value that when set to true tells the matching operation not to perform VARY header matching — i.e. if the URL matches you will get a match regardless of whether the Response object has a VARY header. It defaults to false.
+                });
+            });
+        </script>
+    </body>
+</html>

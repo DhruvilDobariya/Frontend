@@ -1,48 +1,68 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta http-equiv="X-UA-Compatible" content="IE=edge">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-    <script>
-        window.onload = ()=>{
-            document.querySelector("#btn").addEventListener("click", ()=>{
-                localStorage.setItem("id", document.querySelector("#id").value);
-                localStorage.setItem("name", document.querySelector("#name").value);
-            });
-            document.querySelector("#btnGet").addEventListener("click", ()=>{
-                console.log(localStorage.getItem(document.querySelector("#inputGetRemove").value));
-            });
-            document.querySelector("#btnRemove").addEventListener("click", ()=>{
-                localStorage.removeItem(document.querySelector("#inputGetRemove").value);
-            });
-            document.querySelector("#btnClear").addEventListener("click", ()=>{
-                localStorage.clear();
-            });
-            document.querySelector("#btnShow").addEventListener("click", ()=>{
-                console.log(localStorage);
-            });
-        }
-    </script>
-</head>
-<body>
-    <form action="">
-        <p>
-            id: <input type="number" id="id">
-        </p>
-        <p>
-            name: <input type="text" id="name">
-        </p>
-        <p>
-            <input type="button" id="btn" value="submit">
-        </p>
-        <p>
-            key: <input type="text" id="inputGetRemove">
-        </p>
-        <p>
-            <input type="button" id="btnGet" value="getItem in console"> <input type="button" id="btnRemove" value="remove">  <input type="button" id="btnClear" value="clear"> <input type="button" id="btnShow" value="show session in console">
-        </p>
-    </form>
-</body>
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <script>
+            window.onload = () => {
+                document.querySelector('#btn').addEventListener('click', () => {
+                    localStorage.setItem(
+                        'id',
+                        document.querySelector('#id').value
+                    );
+                    localStorage.setItem(
+                        'name',
+                        document.querySelector('#name').value
+                    );
+                });
+                document
+                    .querySelector('#btnGet')
+                    .addEventListener('click', () => {
+                        console.log(
+                            localStorage.getItem(
+                                document.querySelector('#inputGetRemove').value
+                            )
+                        );
+                    });
+                document
+                    .querySelector('#btnRemove')
+                    .addEventListener('click', () => {
+                        localStorage.removeItem(
+                            document.querySelector('#inputGetRemove').value
+                        );
+                    });
+                document
+                    .querySelector('#btnClear')
+                    .addEventListener('click', () => {
+                        localStorage.clear();
+                    });
+                document
+                    .querySelector('#btnShow')
+                    .addEventListener('click', () => {
+                        console.log(localStorage);
+                    });
+            };
+        </script>
+    </head>
+    <body>
+        <form action="">
+            <p>id: <input type="number" id="id" /></p>
+            <p>name: <input type="text" id="name" /></p>
+            <p>
+                <input type="button" id="btn" value="submit" />
+            </p>
+            <p>key: <input type="text" id="inputGetRemove" /></p>
+            <p>
+                <input type="button" id="btnGet" value="getItem in console" />
+                <input type="button" id="btnRemove" value="remove" />
+                <input type="button" id="btnClear" value="clear" />
+                <input
+                    type="button"
+                    id="btnShow"
+                    value="show session in console" />
+            </p>
+        </form>
+    </body>
 </html>
