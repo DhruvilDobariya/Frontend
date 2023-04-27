@@ -38,5 +38,5 @@ let Student = (function () {
     return Student;
 })();
 
-let student = new Student(1, 1, 'Dhruvil Dobariya', 'Very White');
-student.display();
+let user = new Student(1, 1, 'Dhruvil Dobariya', 'Very White');
+user.display();

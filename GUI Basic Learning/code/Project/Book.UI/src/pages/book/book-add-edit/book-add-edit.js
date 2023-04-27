@@ -1,162 +1,155 @@
-import {addBook, editBook, getBookById} from "../../../Services/book-service.js"
+import { addBook, editBook, getBookById } from "../../../Services/book-service.js";
 
 $(document).ready(function () {
-    if(sessionStorage.getItem("id") == null && localStorage.getItem("id") == null){
+    if (sessionStorage.getItem("id") == null && localStorage.getItem("id") == null) {
         window.location.href = "../../user/user-login/user-login.html";
-    }
-    else{
-        if(getQueryString().id != 0){
+    } else {
+        if (getQueryString().id != 0) {
             fillData(getQueryString().id);
             $("#btnSubmit").text("Edit");
         }
         validate();
 
-        $("button[type=reset]").click(function(){
+        $("button[type=reset]").click(function () {
             resetForm();
         });
 
-        $(document).ready(function(){
-            $("#btnLogOut").click(function(){
-                if(localStorage.getItem("id") != null){
+        $(document).ready(function () {
+            $("#btnLogOut").click(function () {
+                if (localStorage.getItem("id") != null) {
                     toastr.success(localStorage.getItem("name") + " logged out successfully");
                     localStorage.clear();
-                }
-                else{
+                } else {
                     toastr.success(sessionStorage.getItem("name") + " logged out successfully");
                     sessionStorage.clear();
                 }
-                setTimeout(()=>{
+                setTimeout(() => {
                     window.location.href = "../../user/user-login/user-login.html";
-                },2000);
+                }, 2000);
             });
         });
     }
 });
 
-function getQueryString(){
+function getQueryString() {
     var queryString = {};
     var rowQueryString = window.location.toString().split("?")[1].split("&");
-    rowQueryString.forEach((element) => {
+    rowQueryString.forEach(element => {
         queryString[element.split("=")[0]] = element.split("=")[1];
     });
     return queryString;
 }
 
-function validate(){
+function validate() {
     $("#form").validate({
-        rules:{
-            title:{
+        rules: {
+            title: {
                 required: true,
-                minlength: 2
+                minlength: 2,
             },
-            author:{
+            author: {
                 required: true,
-                minlength: 2
+                minlength: 2,
             },
-            "rating[]":{
-                required : true,
-                range: [0,5]
-            },
-            price:{
+            "rating[]": {
                 required: true,
-                number: true
+                range: [0, 5],
             },
-            publishDate:{
+            price: {
                 required: true,
-                date: true
+                number: true,
             },
-            url:{
-                url: true
+            publishDate: {
+                required: true,
+                date: true,
             },
-            discription:{
-                maxlength: 500
-            }
+            url: {
+                url: true,
+            },
+            discription: {
+                maxlength: 500,
+            },
         },
-        messages:{
-            title:{
+        messages: {
+            title: {
                 required: "Please eneter title",
-                minlength: "Title must contains at least two character"
+                minlength: "Title must contains at least two character",
             },
-            author:{
+            author: {
                 required: "Please eneter author",
-                minlength: "Author must contains at least two character"
+                minlength: "Author must contains at least two character",
             },
-            "rating[]":{
+            "rating[]": {
                 required: "Please give rating",
-                range: "Rate must be between 0 to 5"
+                range: "Rate must be between 0 to 5",
             },
-            price:{
+            price: {
                 required: "Please eneter price",
-                number: "Please enter valid currency"
+                number: "Please enter valid currency",
             },
-            publishDate:{
+            publishDate: {
                 required: "Please give publish date",
-                date: "Please enter valid publish date"
+                date: "Please enter valid publish date",
             },
-            url:{
-                url: "Please enter valid URL"
+            url: {
+                url: "Please enter valid URL",
             },
-            discription:{
-                maxlength: "Decription must contains less then 500 characters"
-            }
+            discription: {
+                maxlength: "Decription must contains less then 500 characters",
+            },
         },
-        highlight:function(element){
+        highlight: function (element) {
             $(element).removeClass("is-valid");
             $(element).addClass("is-invalid");
         },
-        unhighlight:function(element){
+        unhighlight: function (element) {
             $(element).removeClass("is-invalid");
             $(element).addClass("is-valid");
         },
-        submitHandler:function(form){
+        submitHandler: function (form) {
             var data = $("form").serializeArray();
             var book = {};
-            for(var element of data)
-            {
-                book[element.name] = element.value
+            for (var element of data) {
+                book[element.name] = element.value;
             }
             book["rating"] = book["rating[]"];
             delete book["rating[]"];
-            
-            if(getQueryString().id == 0){
+
+            if (getQueryString().id == 0) {
                 insertBook(book);
-                
-            }
-            else{
+            } else {
                 book.id = getQueryString().id;
                 updateBook(book);
             }
-        }
+        },
     });
 }
 
-async function insertBook(book){
-    try{
+async function insertBook(book) {
+    try {
         const data = await addBook(book);
         $("button[type=reset]").trigger("click");
         toastr.success(data);
-    }
-    catch(e){
+    } catch (e) {
         toastr.error(e.responseText);
     }
 }
 
-async function updateBook(book){
-    try{
+async function updateBook(book) {
+    try {
         const data = await editBook(book);
         $("button[type=reset]").trigger("click");
         toastr.success(data);
-        setTimeout(()=>{
+        setTimeout(() => {
             window.location.href = "../book-list/book-list.html";
-        },2000);
-    }
-    catch(e){
+        }, 2000);
+    } catch (e) {
         toastr.error(e.responseText);
     }
 }
 
-async function fillData(id){
-    try{
+async function fillData(id) {
+    try {
         const data = await getBookById(id);
         $("#Id").val(data["Id"]);
         $("#Title").val(data["Title"]);
@@ -164,22 +157,27 @@ async function fillData(id){
         $("#Price").val(data["Price"]);
         $("#URL").val(data["URL"]);
         $("#Description").val(data["Description"]);
-        
-        var date = new Date(data["PublishDate"])
-        $("#PublishDate").val(date.getFullYear() + "-" +((date.getMonth()+1).length != 2 ? "0" + (date.getMonth() + 1) : (date.getMonth()+1)) + "-" + (date.getDate().toString().length != 2 ? "0" + date.getDate() : date.getDate()));
-        
-        $("[name='rating[]']").each(function(i, element){
-            if(element.value == data["Rating"]){
-                $(element).attr("checked","checked")
+
+        var date = new Date(data["PublishDate"]);
+        $("#PublishDate").val(
+            date.getFullYear() +
+            "-" +
+            ((date.getMonth() + 1).length != 2 ? "0" + (date.getMonth() + 1) : date.getMonth() + 1) +
+            "-" +
+            (date.getDate().toString().length != 2 ? "0" + date.getDate() : date.getDate())
+        );
+
+        $("[name='rating[]']").each(function (i, element) {
+            if (element.value == data["Rating"]) {
+                $(element).attr("checked", "checked");
             }
         });
-    }
-    catch(e){
+    } catch (e) {
         toastr.error(e.responseText);
     }
 }
 
-function resetForm(){
+function resetForm() {
     $("#form").validate().resetForm();
     $("#form input").each(function (i, element) {
         $(element).removeClass("is-valid");

@@ -30,10 +30,10 @@ var StudentPrototype = (function () {
     return StudentPrototype;
 })();
 
-let studentOG = new StudentOG(1, 'Dhruvil Dobariya');
+let studentOG = new StudentOG(1, "Dhruvil Dobariya");
 console.log(studentOG.getStudent());
 
-let studentPrototype = new StudentPrototype(2, 'Bhargav Vachhani');
+let studentPrototype = new StudentPrototype(2, "Bhargav Vachhani");
 console.log(studentPrototype.getStudent());
 
 // we use __proto__ with object and prototype with class

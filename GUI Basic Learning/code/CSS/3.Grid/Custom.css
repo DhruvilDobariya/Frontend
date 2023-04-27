@@ -1,4 +1,4 @@
-.grid-container{
+.grid-container {
     background-color: red;
     display: grid;
     grid-template-columns: 8em 8em 8em 8em; /* Item in one column and their size. */
@@ -8,10 +8,10 @@
     row-gap: 2em; /* gap between all rows. */
     column-gap: 2em; /* gap between all columns. */
 }
-.grid-item{
+.grid-item {
     background-color: aqua;
 }
-.item1{
+.item1 {
     /* For use item span horizontally. */
     grid-column-start: 1; /* Give start grid-column-line number. */
     grid-column-end: 3; /* Give end grid-column-line number. */
@@ -20,7 +20,7 @@
      *grid-column: 1 / span 2; Here 1 is starting no. of grid-column-line and 2 is the reperesent that how many boxes, we want span. 
     */
 }
-.item3{
+.item3 {
     grid-column-start: 4;
     grid-column-end: 5;
     /* For use item span vertically. */
