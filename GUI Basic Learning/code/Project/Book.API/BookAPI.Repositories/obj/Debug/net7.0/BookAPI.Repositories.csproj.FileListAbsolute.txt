@@ -28,3 +28,18 @@ D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\Book
 D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\bin\Debug\net7.0\BookAPI.Domain.pdb
 D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.csproj.CopyComplete
 D:\Dhruvil Dobariya - 335\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\ref\BookAPI.Repositories.dll
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\bin\Debug\net7.0\BookAPI.Repositories.deps.json
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\bin\Debug\net7.0\BookAPI.Repositories.dll
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\bin\Debug\net7.0\BookAPI.Repositories.pdb
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\bin\Debug\net7.0\BookAPI.Domain.dll
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\bin\Debug\net7.0\BookAPI.Domain.pdb
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.csproj.AssemblyReference.cache
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.AssemblyInfoInputs.cache
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.AssemblyInfo.cs
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.csproj.CoreCompileInputs.cache
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.csproj.CopyComplete
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.dll
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\refint\BookAPI.Repositories.dll
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\BookAPI.Repositories.pdb
+C:\Users\dhruvil.d\Learn\Frontend\GUI Basic Learning\code\Project\Book.API\BookAPI.Repositories\obj\Debug\net7.0\ref\BookAPI.Repositories.dll

@@ -1,40 +1,35 @@
 {
   "format": 1,
   "restore": {
-    "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj": {}
+    "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj": {}
   },
   "projects": {
-    "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj": {
+    "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj",
+        "projectUniqueName": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj",
         "projectName": "StudentAPI.Presentation",
-        "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj",
-        "packagesPath": "C:\\Users\\Dhruvil.D\\.nuget\\packages\\",
-        "outputPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\obj\\",
+        "projectPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj",
+        "packagesPath": "C:\\Users\\dhruvil.d\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dhruvil.D\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\dhruvil.d\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj": {
-                "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj"
+              "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj": {
+                "projectPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj"
               }
             }
           }
@@ -46,8 +41,8 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
@@ -55,7 +50,7 @@
             },
             "Microsoft.AspNetCore.OpenApi": {
               "target": "Package",
-              "version": "[8.0.0-preview.1.23112.2, )"
+              "version": "[7.0.5, )"
             },
             "Newtonsoft.Json": {
               "target": "Package",
@@ -85,38 +80,33 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.1.23115.2\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj": {
+    "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj",
+        "projectUniqueName": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj",
         "projectName": "StudentAPI.Domain",
-        "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj",
-        "packagesPath": "C:\\Users\\Dhruvil.D\\.nuget\\packages\\",
-        "outputPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\obj\\",
+        "projectPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj",
+        "packagesPath": "C:\\Users\\dhruvil.d\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dhruvil.D\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\dhruvil.d\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {}
           }
         },
@@ -127,12 +117,16 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.5, )"
             }
           },
           "imports": [
@@ -151,41 +145,36 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.1.23115.2\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     },
-    "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj": {
+    "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj",
+        "projectUniqueName": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj",
         "projectName": "StudentAPI.Repositories",
-        "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj",
-        "packagesPath": "C:\\Users\\Dhruvil.D\\.nuget\\packages\\",
-        "outputPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\obj\\",
+        "projectPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj",
+        "packagesPath": "C:\\Users\\dhruvil.d\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\obj\\",
         "projectStyle": "PackageReference",
-        "fallbackFolders": [
-          "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-        ],
         "configFilePaths": [
-          "C:\\Users\\Dhruvil.D\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+          "C:\\Users\\dhruvil.d\\AppData\\Roaming\\NuGet\\NuGet.Config",
           "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
         ],
         "originalTargetFrameworks": [
-          "net8.0"
+          "net7.0"
         ],
         "sources": {
           "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-          "C:\\Program Files\\dotnet\\library-packs": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
-          "net8.0": {
-            "targetAlias": "net8.0",
+          "net7.0": {
+            "targetAlias": "net7.0",
             "projectReferences": {
-              "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj": {
-                "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj"
+              "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj": {
+                "projectPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Domain\\StudentAPI.Domain.csproj"
               }
             }
           }
@@ -197,12 +186,16 @@
         }
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "dependencies": {
             "Dapper": {
               "target": "Package",
               "version": "[2.0.123, )"
+            },
+            "Microsoft.AspNetCore.OpenApi": {
+              "target": "Package",
+              "version": "[7.0.5, )"
             },
             "Microsoft.Extensions.Configuration.Abstractions": {
               "target": "Package",
@@ -229,7 +222,7 @@
               "privateAssets": "all"
             }
           },
-          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.1.23115.2\\RuntimeIdentifierGraph.json"
+          "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
         }
       }
     }

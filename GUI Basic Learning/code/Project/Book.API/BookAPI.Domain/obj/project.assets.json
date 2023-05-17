@@ -2132,24 +2132,19 @@
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dhruvil.D\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\dhruvil.d\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj",
+      "projectUniqueName": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj",
       "projectName": "BookAPI.Domain",
-      "projectPath": "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj",
-      "packagesPath": "C:\\Users\\Dhruvil.D\\.nuget\\packages\\",
-      "outputPath": "D:\\Dhruvil Dobariya - 335\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\obj\\",
+      "projectPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\BookAPI.Domain.csproj",
+      "packagesPath": "C:\\Users\\dhruvil.d\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\Project\\Book.API\\BookAPI.Domain\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Dhruvil.D\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\dhruvil.d\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
@@ -2157,7 +2152,6 @@
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
@@ -2208,26 +2202,12 @@
         ],
         "assetTargetFallback": true,
         "warn": true,
-        "downloadDependencies": [
-          {
-            "name": "Microsoft.AspNetCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.NETCore.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          },
-          {
-            "name": "Microsoft.WindowsDesktop.App.Ref",
-            "version": "[7.0.2, 7.0.2]"
-          }
-        ],
         "frameworkReferences": {
           "Microsoft.NETCore.App": {
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.1.23115.2\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }

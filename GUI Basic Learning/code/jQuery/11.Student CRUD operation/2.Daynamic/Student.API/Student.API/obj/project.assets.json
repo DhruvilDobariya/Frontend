@@ -1,7 +1,7 @@
 {
   "version": 3,
   "targets": {
-    "net8.0": {
+    "net7.0": {
       "Dapper/2.0.123": {
         "type": "package",
         "compile": {
@@ -77,18 +77,18 @@
           }
         }
       },
-      "Microsoft.AspNetCore.OpenApi/8.0.0-preview.1.23112.2": {
+      "Microsoft.AspNetCore.OpenApi/7.0.5": {
         "type": "package",
         "dependencies": {
           "Microsoft.OpenApi": "1.4.3"
         },
         "compile": {
-          "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll": {
+          "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
             "related": ".xml"
           }
         },
         "runtime": {
-          "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll": {
+          "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll": {
             "related": ".xml"
           }
         },
@@ -611,9 +611,10 @@
       },
       "StudentAPI.Domain/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
-          "Dapper": "2.0.123"
+          "Dapper": "2.0.123",
+          "Microsoft.AspNetCore.OpenApi": "7.0.5"
         },
         "compile": {
           "bin/placeholder/StudentAPI.Domain.dll": {}
@@ -624,9 +625,10 @@
       },
       "StudentAPI.Repositories/1.0.0": {
         "type": "project",
-        "framework": ".NETCoreApp,Version=v8.0",
+        "framework": ".NETCoreApp,Version=v7.0",
         "dependencies": {
           "Dapper": "2.0.123",
+          "Microsoft.AspNetCore.OpenApi": "7.0.5",
           "Microsoft.Extensions.Configuration.Abstractions": "7.0.0",
           "MySql.Data": "8.0.32",
           "StudentAPI.Domain": "1.0.0"
@@ -741,18 +743,18 @@
         "lib/netstandard2.0/K4os.Hash.xxHash.xml"
       ]
     },
-    "Microsoft.AspNetCore.OpenApi/8.0.0-preview.1.23112.2": {
-      "sha512": "j92urmhFt9JZbKqgGs2yJYyt6ZqF417pRxpKwavrYQBOAJcqAdL4U/7CnLkXd5SkuOzEBcFN3wjktbZ+rJykiQ==",
+    "Microsoft.AspNetCore.OpenApi/7.0.5": {
+      "sha512": "yxFvk9BsgL/eDJVsPp0zbUpL73u9uXLYTnWoMBvnJdm8+970YuhM2XWcDOyetjkp8l8z00MHgfYHCRXOnLx/+Q==",
       "type": "package",
-      "path": "microsoft.aspnetcore.openapi/8.0.0-preview.1.23112.2",
+      "path": "microsoft.aspnetcore.openapi/7.0.5",
       "files": [
         ".nupkg.metadata",
         ".signature.p7s",
         "Icon.png",
         "THIRD-PARTY-NOTICES.TXT",
-        "lib/net8.0/Microsoft.AspNetCore.OpenApi.dll",
-        "lib/net8.0/Microsoft.AspNetCore.OpenApi.xml",
-        "microsoft.aspnetcore.openapi.8.0.0-preview.1.23112.2.nupkg.sha512",
+        "lib/net7.0/Microsoft.AspNetCore.OpenApi.dll",
+        "lib/net7.0/Microsoft.AspNetCore.OpenApi.xml",
+        "microsoft.aspnetcore.openapi.7.0.5.nupkg.sha512",
         "microsoft.aspnetcore.openapi.nuspec"
       ]
     },
@@ -2184,49 +2186,43 @@
     }
   },
   "projectFileDependencyGroups": {
-    "net8.0": [
+    "net7.0": [
       "Dapper >= 2.0.123",
-      "Microsoft.AspNetCore.OpenApi >= 8.0.0-preview.1.23112.2",
+      "Microsoft.AspNetCore.OpenApi >= 7.0.5",
       "Newtonsoft.Json >= 13.0.2",
       "StudentAPI.Repositories >= 1.0.0",
       "Swashbuckle.AspNetCore >= 6.5.0"
     ]
   },
   "packageFolders": {
-    "C:\\Users\\Dhruvil.D\\.nuget\\packages\\": {},
-    "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages": {}
+    "C:\\Users\\dhruvil.d\\.nuget\\packages\\": {}
   },
   "project": {
     "version": "1.0.0",
     "restore": {
-      "projectUniqueName": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj",
+      "projectUniqueName": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj",
       "projectName": "StudentAPI.Presentation",
-      "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj",
-      "packagesPath": "C:\\Users\\Dhruvil.D\\.nuget\\packages\\",
-      "outputPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\obj\\",
+      "projectPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\StudentAPI.Presentation.csproj",
+      "packagesPath": "C:\\Users\\dhruvil.d\\.nuget\\packages\\",
+      "outputPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\Student.API\\obj\\",
       "projectStyle": "PackageReference",
-      "fallbackFolders": [
-        "C:\\Program Files (x86)\\Microsoft Visual Studio\\Shared\\NuGetPackages"
-      ],
       "configFilePaths": [
-        "C:\\Users\\Dhruvil.D\\AppData\\Roaming\\NuGet\\NuGet.Config",
-        "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.FallbackLocation.config",
+        "C:\\Users\\dhruvil.d\\AppData\\Roaming\\NuGet\\NuGet.Config",
         "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
       ],
       "originalTargetFrameworks": [
-        "net8.0"
+        "net7.0"
       ],
       "sources": {
         "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
-        "C:\\Program Files\\dotnet\\library-packs": {},
         "https://api.nuget.org/v3/index.json": {}
       },
       "frameworks": {
-        "net8.0": {
-          "targetAlias": "net8.0",
+        "net7.0": {
+          "targetAlias": "net7.0",
           "projectReferences": {
-            "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj": {
-              "projectPath": "D:\\Dhruvil Dobariya - 335\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj"
+            "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj": {
+              "projectPath": "C:\\Users\\dhruvil.d\\Learn\\Frontend\\GUI Basic Learning\\code\\jQuery\\11.Student CRUD operation\\2.Daynamic\\Student.API\\StudentAPI.Repositories\\StudentAPI.Repositories.csproj"
             }
           }
         }
@@ -2238,8 +2234,8 @@
       }
     },
     "frameworks": {
-      "net8.0": {
-        "targetAlias": "net8.0",
+      "net7.0": {
+        "targetAlias": "net7.0",
         "dependencies": {
           "Dapper": {
             "target": "Package",
@@ -2247,7 +2243,7 @@
           },
           "Microsoft.AspNetCore.OpenApi": {
             "target": "Package",
-            "version": "[8.0.0-preview.1.23112.2, )"
+            "version": "[7.0.5, )"
           },
           "Newtonsoft.Json": {
             "target": "Package",
@@ -2277,7 +2273,7 @@
             "privateAssets": "all"
           }
         },
-        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\8.0.100-preview.1.23115.2\\RuntimeIdentifierGraph.json"
+        "runtimeIdentifierGraphPath": "C:\\Program Files\\dotnet\\sdk\\7.0.202\\RuntimeIdentifierGraph.json"
       }
     }
   }
