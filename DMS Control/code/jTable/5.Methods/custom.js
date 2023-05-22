@@ -2,96 +2,8 @@ $(document).ready(function () {
     $("#table").jtable({
         title: "Students", // set title of table
 
-        addRecordButton: "", // configur add button
-        // showCloseButton: true, // default: true, when user click on button, closeRequested event reised
-        // this is userd to close child table
-
-        ajaxSetting: {
-            // configur globl ajax request
-            type: "GET",
-        },
-
-        // column configuration
-        columnResizable: true, // default: true, allow to resize column
-        columnSelectable: true, // default: true, user can show and hide column by right click on header
-
-        // sorting configuration
-        sorting: true, // default: false, give sorting button in header
-        defaultSorting: "Name ASC", // "ColumnnName ASC" or "ColumnName DESC" we can also set multiple column
-        multiSorting: true, // default: false, set multiple sorting
-
-        // paging
-        paging: true, // default: false, enable paging
-        pageSize: 10, // default: 10, set page size
-        gotoPageArea: "none", // set direct page navigation is enable or not
-        pageSizeChangeArea: true, // default: true, set pagination combobox is eable or not
-        pageList: "normal", // set behaviour of navigation panel
-        // we have two behaviour for navigation panel
-        // 1) minimal: Show only first, previous, next and last links.
-        // 2) normal: Shows page numbers in addition to 'minimal'.
-        pageSizes: [10, 20, 30, 40], // set combobox option
-
-        // select
-        selecting: true, // default: false, it enable to select row
-        multiselect: true, // default: false, it enable multiple selection of rows
-        selectingCheckboxes: true, // default: false, it enable checkbox for select row
-        selectOnRowClick: true, // default: false, it enables selection row on clicking
-
-        // delete configuration
-        // deleteConfiguration: true, // default: true, it set whether dialog box open or not on delete
-        defaultConfiguration: function (data) {
-            // we also can configure behaviour of dialog box
-            // data have following properties,
-            // row: A jQuery selection for deleting row element.
-            // record: recored which we are going to be delete/
-            // cancel: We can set data.cancel to true to cancel delete process (default value is false).
-            // cancelMessage: If we cancelled delete process, we can show a message to user that explains cancellation reason.
-            // deleteConfirm: A boolean value indicates whether to show a delete confirmation message or not (default value is true).
-            // deleteConfirmMessage: If confirmation enabled, we can set a custom confirmation message.
-
-            deleteConfirm = true;
-            data.deleteConfirmMessage = "Are you sure you want to delete this record";
-        },
-
-        // animation and theam configuration
-        // jqueryuiTheme: "false", // default: false, set whether jqueryui theam use or not
-        animationsEnabled: false, // default: true, set whether animation enable or not
-        loadingAnimationDelay: "7000", // set loading animation delay
-        dialogShowEffect: "bounce", // set dialog show effect
-        dialogHideEffect: "drop", // set dialog hide effect
-        // we have multiple types of effect like,
-        // 'blind', 'bounce', 'clip', 'drop', 'explode', 'fold', 'highlight', 'puff', 'pulsate', 'scale', 'shake', 'size', 'slide'
-
-        // Other options
-        openChildAsAccordion: true, // default: false, set child table is open and close in accordion
-        defaultDateFormat: "dd-mm-yyyy", // default: yy-mm-dd, set default format of date
-
-        saveUserPreferences: true, // default: true it save the user customization and apply on other page
-
-        showCloseButton: true, // default: false, it set the close button in ui, it work with child table
-
-        tableId: "", // set table id for saving and restoring user preferance
-
-        toolbar: {
-            hoverAnimation: true, // enable/ disable small animation of mouse hover on toolbar
-            hoverAnumationDuration: 60, // set hover animation duration
-            hoverAnimationEasing: "swing", // set hover animation easing
-
-            items: [
-                // array of custome toolbar items
-                {
-                    icon: "",
-                    text: "tool",
-                    cssClass: "btn btn-danger",
-                    tooltip: "tooltip of tool",
-                    click: function () {
-                        alert("clicked");
-                    },
-                },
-            ],
-        },
-
-        unAuthorizedRequestRedirectUrl: "https://www.google.com", // it redirect specific url if ajax call is unauthorized
+        selecting: true,
+        multiselect: true,
 
         fields: {
             Id: {
@@ -100,12 +12,9 @@ $(document).ready(function () {
                 edit: false,
                 create: false,
                 delete: true,
-                // visibility: "hidden",
             },
             Name: {
                 title: "Name",
-                // sorting: true,
-                // optionSorting: "text",
             },
             RollNo: {
                 title: "Roll No",
@@ -258,7 +167,158 @@ $(document).ready(function () {
         },
     });
 
-    // event
-    $("#table").jtable("load");
-    // $("#table").jtable("option", "pageSize", 5);
+    // methods
+
+    // addRecord()
+    // It is used to add new recored in table programmaticaly
+    // options:
+    // record: the object of record which we want to add
+    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
+    // animationsEnable: default: true, if true then show animation while deleting row
+    // url: specify url for createAction
+    // success: it is callback function which is execute when ajax call success
+    // error: it is callback function which is execute when ajax call give something error
+    $("#table").jtable("addRecord", {
+        record: JSON.stringify({
+            name: "string",
+            rollNo: 102,
+            email: "user@example.com",
+            contactNo: "8582582546",
+        }),
+        clientOnly: true,
+        animationsEnable: true,
+        url: "https://localhost:44319/api/Students",
+        success: function (data) {
+            console.log("message: " + data);
+        },
+        error: function (e) {
+            console.log("message: " + e);
+        },
+    });
+
+    // changeColumnVisibility()
+    // it is used to change column visibility
+    // we have three diffrent behaviour of visibility
+    // hidden, visible, fixed
+    $("#table").jtable("changeColumnVisibility", "Id", "fixed");
+
+    // selectedRows()
+    // it is used to get all selected rows from table
+    let $selectedRows = $("#table").jtable("selectedRows");
+    console.log($selectedRows);
+
+    // getRowByKey()
+    // it is used to retieve recored by key
+    let $getRowByKey = $("#table").jtable("getRowByKey", 4);
+    // let $getRowByKey = $("#table").jtable("getRowByKey", {
+    //     key: 4,
+    // });
+    console.log($getRowByKey);
+
+    // deleteRows()
+    // it will delete rows fron server and client both side
+    // $("#table").jtable("deleteRows", 10);
+
+    // updateRocord()
+    // it is used to delete row by key
+    // options:
+    // record: the object of record which we want to add
+    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
+    // url: specify url for createAction
+    // animationsEnable: default: true, if true then show animation while deleting row
+    // success: it is callback function which is execute when ajax call success
+    // error: it is callback function which is execute when ajax call give something error
+    $("#table").jtable("updateRecord", {
+        record: JSON.stringify({
+            id: 21,
+            name: "string",
+            rollNo: 102,
+            email: "user@example.com",
+            contactNo: "8582582546",
+        }),
+        clientOnly: true,
+        animationsEnable: true,
+        url: "https://localhost:44319/api/Students",
+        success: function (data) {
+            console.log("message: " + data);
+        },
+        error: function (e) {
+            console.log("message: " + e);
+        },
+    });
+
+    // deleteRecord()
+    // it is used to delete row by key
+    // options:
+    // record: the object of record which we want to add
+    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
+    // url: specify url for createAction
+    // animationsEnable: default: true, if true then show animation while deleting row
+    // success: it is callback function which is execute when ajax call success
+    // error: it is callback function which is execute when ajax call give something error
+    $("#table").jtable("deleteRecord", {
+        key: 4,
+        clientOnly: true,
+        animationsEnable: true,
+        url: "https://localhost:44319/api/Students",
+        success: function (data) {
+            console.log("message: " + data);
+        },
+        error: function (e) {
+            console.log("message: " + e);
+        },
+    });
+
+    // load()
+    // load a data into table
+    $("#table").jtable("load", { id: 2 }, function () {
+        console.log("table loaded successfully");
+    });
+    // give those recored which is id equals to 2, we also can handle request on server side
+
+    // reload()
+    // it will reload table and execute callback function
+    $("#table").jtable("reload", function () {
+        console.log("table reloaded successfully");
+    });
+
+    // destroy()
+    // it will destory table
+    // $("#table").jtable("destroy");
+
+    // selectRows()
+    // it is used to select rows
+    // $("#table").jtable("selectRows", 10);
+
+    // showCreateForm()
+    // it will show create form
+    // $("#table").jtable("showCreateForm");
+
+    // child table methods
+    // openChildRow()
+    // it is used to open child rows
+    $("#table").jtable("oprnChildRow", 10);
+
+    // closeChildRow()
+    // it is used to close child rows
+    $("#table").jtable("closeChildRow", 10);
+
+    // openChildTable()
+    // it is used to create and open child table
+    // options:
+    // row: data of the table
+    // tableOptions: options of table
+    // opened: callback function which is execute after table is opend
+    $("#table").jtable("openChildTable", 10, {}, function (data) {
+        data.childTable.reload();
+    });
+
+    // closeChildTable()
+    // it is used to create and close child table
+    // options:
+    // row: data of the table
+    // closed: callback function which is execute after table is closed
+    $("#table").jtable("openChildTable", 10, function () {
+        console.log("table is closed");
+    });
 });
