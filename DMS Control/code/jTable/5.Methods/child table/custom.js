@@ -29,6 +29,18 @@ $(document).ready(function () {
             phone: {
                 title: "Contact No",
             },
+            address: {
+                title: "Address",
+                display: function (data) {
+                    return JSON.stringify(data.record.address.street) + ", " + JSON.stringify(data.record.address.suite);
+                },
+            },
+            gov: {
+                title: "GOV",
+                display: function (data) {
+                    return JSON.stringify(data.record.address.geo.lat) + ", " + JSON.stringify(data.record.address.geo.lng);
+                },
+            },
             childTable: {
                 title: "Todo",
                 create: false,

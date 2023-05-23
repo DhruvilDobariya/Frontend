@@ -30,11 +30,12 @@ $(document).ready(function () {
             userId: {
                 title: "UserId",
                 // options: ["Home phone", "Office phone", "Cell phone"],
-                // options: { // using key-value pair of object
-                //     1: "Home phone",
-                //     2: "Office phone",
-                //     3: "Cell phone"
-                // },
+                options: {
+                    // using key-value pair of object
+                    1: "Home phone",
+                    2: "Office phone",
+                    3: "Cell phone",
+                },
                 // options: [ // using key-value pair of array
                 //     { Value: "1", DisplayText: "Home phone" },
                 //     { Value: "2", DisplayText: "Office phone" },
@@ -82,16 +83,23 @@ $(document).ready(function () {
                 // 5) cheackbox
                 // 6) hidden: hide in form also hide in table
             },
-            // checkedBox: {
-            //     title: "Check Box",
-            //     list: false,
+            radioButton: {
+                title: "Radio button",
+                list: false,
 
-            //     type: "checkbox",
-            //     value: {
-            //         1: "Male",
-            //         2: "Female",
-            //     },
-            // },
+                type: "radiobutton",
+                options: {
+                    1: "Male",
+                    2: "Female",
+                },
+            },
+            checkBox: {
+                title: "Check box",
+                list: false,
+
+                type: "checkbox",
+                values: { false: "Passive", true: "Active" },
+            },
             dependedColumn: {
                 title: "Dependend Column",
                 dependsOn: "id", // This property use to get the date of the other field inside the current column

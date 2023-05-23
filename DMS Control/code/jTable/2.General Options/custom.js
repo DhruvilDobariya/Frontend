@@ -51,7 +51,7 @@ $(document).ready(function () {
 
             deleteConfirm = true;
             data.deleteConfirmMessage = "Are you sure you want to delete this record";
-        },
+        }, 
 
         // animation and theam configuration
         // jqueryuiTheme: "false", // default: false, set whether jqueryui theam use or not

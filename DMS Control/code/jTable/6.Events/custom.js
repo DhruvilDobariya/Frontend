@@ -2,6 +2,8 @@ $(document).ready(function () {
     $("#table").jtable({
         title: "Students", // set title of table
 
+        showCloseButton: true,
+
         selecting: true,
         multiselect: true,
 
@@ -162,163 +164,86 @@ $(document).ready(function () {
             },
         },
 
+        // event
+        // closeRequest
+        // it triggered when we click on close button of table
         closeRequested: function () {
             $("#table").jtable("destroy");
+            console.log("table closed");
+        },
+
+        // formClose
+        // it triggered when we form is close
+        formClosed: function () {
+            console.log("form closed");
+        },
+
+        // formCreated
+        // it triggered when we form is create
+        formCreated: function () {
+            console.log("form created");
+        },
+
+        // formSubmitting
+        // it triggered when we form is submit
+        formSubmitting: function () {
+            console.log("form is submiting...");
+        },
+
+        // loadingRecords
+        // it triggered when loading recored in table
+        loadingRecords: function () {
+            console.log("record is loading...");
+        },
+
+        // recordsLoaded
+        // it triggered when recored load successfully
+        recordsLoaded: function () {
+            console.log("recored loaded successfully");
+        },
+
+        // recordAdded
+        // it triggered when record is add
+        recordAdded: function () {
+            console.log("recored added successfully");
+        },
+
+        // recordAdded
+        // it triggered when record is add
+        recordUpdated: function () {
+            console.log("recored updated successfully");
+        },
+
+        // recordAdded
+        // it triggered when record is add
+        recordDeleted: function () {
+            console.log("recored deleted successfully");
+        },
+
+        // rowInserted
+        // it triggered when row insert in table
+        rowInserted: function () {
+            console.log("row inserted successfully");
+        },
+
+        // rowUpdated
+        // it triggered when row update in table
+        rowUpdated: function () {
+            console.log("row updated successfully");
+        },
+
+        // rowRemoved
+        // it triggered when row insert in table
+        rowRemoved: function () {
+            console.log("row removed successfully");
+        },
+
+        // selectionChanged
+        // it triggered when select any row or unselect any row
+        selectionChanged: function () {
+            console.log("selection is changed");
         },
     });
 
-    // methods
-
-    // addRecord()
-    // It is used to add new recored in table programmaticaly
-    // options:
-    // record: the object of record which we want to add
-    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
-    // animationsEnable: default: true, if true then show animation while deleting row
-    // url: specify url for createAction
-    // success: it is callback function which is execute when ajax call success
-    // error: it is callback function which is execute when ajax call give something error
-    $("#table").jtable("addRecord", {
-        record: JSON.stringify({
-            name: "string",
-            rollNo: 102,
-            email: "user@example.com",
-            contactNo: "8582582546",
-        }),
-        clientOnly: true,
-        animationsEnable: true,
-        url: "https://localhost:44319/api/Students",
-        success: function (data) {
-            console.log("message: " + data);
-        },
-        error: function (e) {
-            console.log("message: " + e);
-        },
-    });
-
-    // changeColumnVisibility()
-    // it is used to change column visibility
-    // we have three diffrent behaviour of visibility
-    // hidden, visible, fixed
-    $("#table").jtable("changeColumnVisibility", "Id", "fixed");
-
-    // selectedRows()
-    // it is used to get all selected rows from table
-    let $selectedRows = $("#table").jtable("selectedRows");
-    console.log($selectedRows);
-
-    // getRowByKey()
-    // it is used to retieve recored by key
-    let $getRowByKey = $("#table").jtable("getRowByKey", 4);
-    // let $getRowByKey = $("#table").jtable("getRowByKey", {
-    //     key: 4,
-    // });
-    console.log($getRowByKey);
-
-    // deleteRows()
-    // it will delete rows fron server and client both side
-    // $("#table").jtable("deleteRows", 10);
-
-    // updateRocord()
-    // it is used to delete row by key
-    // options:
-    // record: the object of record which we want to add
-    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
-    // url: specify url for createAction
-    // animationsEnable: default: true, if true then show animation while deleting row
-    // success: it is callback function which is execute when ajax call success
-    // error: it is callback function which is execute when ajax call give something error
-    $("#table").jtable("updateRecord", {
-        record: JSON.stringify({
-            id: 21,
-            name: "string",
-            rollNo: 102,
-            email: "user@example.com",
-            contactNo: "8582582546",
-        }),
-        clientOnly: true,
-        animationsEnable: true,
-        url: "https://localhost:44319/api/Students",
-        success: function (data) {
-            console.log("message: " + data);
-        },
-        error: function (e) {
-            console.log("message: " + e);
-        },
-    });
-
-    // deleteRecord()
-    // it is used to delete row by key
-    // options:
-    // record: the object of record which we want to add
-    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
-    // url: specify url for createAction
-    // animationsEnable: default: true, if true then show animation while deleting row
-    // success: it is callback function which is execute when ajax call success
-    // error: it is callback function which is execute when ajax call give something error
-    $("#table").jtable("deleteRecord", {
-        key: 4,
-        clientOnly: true,
-        animationsEnable: true,
-        url: "https://localhost:44319/api/Students",
-        success: function (data) {
-            console.log("message: " + data);
-        },
-        error: function (e) {
-            console.log("message: " + e);
-        },
-    });
-
-    // load()
-    // load a data into table
-    $("#table").jtable("load", { id: 2 }, function () {
-        console.log("table loaded successfully");
-    });
-    // give those recored which is id equals to 2, we also can handle request on server side
-
-    // reload()
-    // it will reload table and execute callback function
-    $("#table").jtable("reload", function () {
-        console.log("table reloaded successfully");
-    });
-
-    // destroy()
-    // it will destory table
-    // $("#table").jtable("destroy");
-
-    // selectRows()
-    // it is used to select rows
-    // $("#table").jtable("selectRows", 10);
-
-    // showCreateForm()
-    // it will show create form
-    // $("#table").jtable("showCreateForm");
-
-    // child table methods
-    // openChildRow()
-    // it is used to open child rows
-    $("#table").jtable("oprnChildRow", 10);
-
-    // closeChildRow()
-    // it is used to close child rows
-    $("#table").jtable("closeChildRow", 10);
-
-    // openChildTable()
-    // it is used to create and open child table
-    // options:
-    // row: data of the table
-    // tableOptions: options of table
-    // opened: callback function which is execute after table is opend
-    $("#table").jtable("openChildTable", 10, {}, function (data) {
-        data.childTable.reload();
-    });
-
-    // closeChildTable()
-    // it is used to create and close child table
-    // options:
-    // row: data of the table
-    // closed: callback function which is execute after table is closed
-    $("#table").jtable("closeChildTable", 10, function () {
-        console.log("table is closed");
-    });
+    $("#table").jtable("load");
 });
