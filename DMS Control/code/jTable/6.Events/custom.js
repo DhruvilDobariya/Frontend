@@ -167,83 +167,111 @@ $(document).ready(function () {
         // event
         // closeRequest
         // it triggered when we click on close button of table
-        closeRequested: function () {
+        closeRequested: function (event, data) {
             $("#table").jtable("destroy");
             console.log("table closed");
         },
 
         // formClose
         // it triggered when we form is close
-        formClosed: function () {
+        formClosed: function (event, data) {
+            // data.form: it give form as a jQuery selector
+            // data.formType: it give type of form like create or edit
+            // data.row: it give us edited row if form is in edit mode
             console.log("form closed");
         },
 
         // formCreated
         // it triggered when we form is create
-        formCreated: function () {
+        formCreated: function (event, data) {
+            // data.form: it give form as a jQuery selector
+            // data.formType: it give type of form like create or edit
+            // data.record: it give us edited record if form is in edit mode
+            // data.row: it give us edited row if form is in edit mode
             console.log("form created");
         },
 
         // formSubmitting
         // it triggered when we form is submit
-        formSubmitting: function () {
+        formSubmitting: function (event, data) {
+            // data.form: it give form as a jQuery selector
+            // data.formType: it give type of form like create or edit
+            // data.row: it give us edited row if form is in edit mode
             console.log("form is submiting...");
         },
 
         // loadingRecords
         // it triggered when loading recored in table
-        loadingRecords: function () {
+        loadingRecords: function (event, data) {
             console.log("record is loading...");
         },
 
         // recordsLoaded
         // it triggered when recored load successfully
-        recordsLoaded: function () {
+        recordsLoaded: function (event, data) {
+            // data.record: it give us all the record which is loaded
+            // data.serverResponse: it give use server response
             console.log("recored loaded successfully");
         },
 
         // recordAdded
         // it triggered when record is add
-        recordAdded: function () {
+        recordAdded: function (event, data) {
+            // data.record: it give us object of added recored
+            // data.serverResponse: it give use server response
             console.log("recored added successfully");
         },
 
         // recordAdded
         // it triggered when record is add
-        recordUpdated: function () {
+        recordUpdated: function (event, data) {
+            // data.record: it give us object of added recored
+            // data.row: it give us edited row
+            // data.serverResponse: it give use server response
             console.log("recored updated successfully");
         },
 
         // recordAdded
         // it triggered when record is add
-        recordDeleted: function () {
+        recordDeleted: function (event, data) {
+            // data.record: it give us object of added recored
+            // data.row: it give us deleted row
+            // data.serverResponse: it give use server response
             console.log("recored deleted successfully");
         },
 
         // rowInserted
         // it triggered when row insert in table
-        rowInserted: function () {
+        rowInserted: function (event, data) {
+            // data.record: it give us record
+            // data.row: it give us row
+            // data.isNewRow: it gives true if it is new row
             console.log("row inserted successfully");
         },
 
         // rowUpdated
         // it triggered when row update in table
-        rowUpdated: function () {
+        rowUpdated: function (event, data) {
+            // data.record: it give us updated record
+            // data.row: it give us updated row
             console.log("row updated successfully");
         },
 
         // rowRemoved
         // it triggered when row insert in table
-        rowRemoved: function () {
+        rowRemoved: function (event, data) {
+            // data.row: it give us deleted row
+            // data.reason: it give us reason
             console.log("row removed successfully");
         },
 
         // selectionChanged
         // it triggered when select any row or unselect any row
-        selectionChanged: function () {
+        selectionChanged: function (event, data) {
             console.log("selection is changed");
         },
     });
 
     $("#table").jtable("load");
+    
 });
