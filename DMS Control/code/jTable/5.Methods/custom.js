@@ -169,111 +169,113 @@ $(document).ready(function () {
 
     // methods
 
-    // addRecord()
-    // It is used to add new recored in table programmaticaly
-    // options:
-    // record: the object of record which we want to add
-    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
-    // animationsEnable: default: true, if true then show animation while deleting row
-    // url: specify url for createAction
-    // success: it is callback function which is execute when ajax call success
-    // error: it is callback function which is execute when ajax call give something error
-    $("#table").jtable("addRecord", {
-        record: JSON.stringify({
-            name: "string",
-            rollNo: 102,
-            email: "user@example.com",
-            contactNo: "8582582546",
-        }),
-        clientOnly: true,
-        animationsEnable: true,
-        url: "https://localhost:44319/api/Students",
-        success: function (data) {
-            console.log("message: " + data);
-        },
-        error: function (e) {
-            console.log("message: " + e);
-        },
-    });
-
-    // changeColumnVisibility()
-    // it is used to change column visibility
-    // we have three diffrent behaviour of visibility
-    // hidden, visible, fixed
-    $("#table").jtable("changeColumnVisibility", "Id", "fixed");
-
-    // selectedRows()
-    // it is used to get all selected rows from table
-    let $selectedRows = $("#table").jtable("selectedRows");
-    console.log($selectedRows);
-
-    // getRowByKey()
-    // it is used to retieve recored by key
-    let $getRowByKey = $("#table").jtable("getRowByKey", 4);
-    // let $getRowByKey = $("#table").jtable("getRowByKey", {
-    //     key: 4,
-    // });
-    console.log($getRowByKey);
-
-    // deleteRows()
-    // it will delete rows fron server and client both side
-    // $("#table").jtable("deleteRows", 10);
-
-    // updateRocord()
-    // it is used to delete row by key
-    // options:
-    // record: the object of record which we want to add
-    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
-    // url: specify url for createAction
-    // animationsEnable: default: true, if true then show animation while deleting row
-    // success: it is callback function which is execute when ajax call success
-    // error: it is callback function which is execute when ajax call give something error
-    $("#table").jtable("updateRecord", {
-        record: JSON.stringify({
-            id: 21,
-            name: "string",
-            rollNo: 102,
-            email: "user@example.com",
-            contactNo: "8582582546",
-        }),
-        clientOnly: true,
-        animationsEnable: true,
-        url: "https://localhost:44319/api/Students",
-        success: function (data) {
-            console.log("message: " + data);
-        },
-        error: function (e) {
-            console.log("message: " + e);
-        },
-    });
-
-    // deleteRecord()
-    // it is used to delete row by key
-    // options:
-    // record: the object of record which we want to add
-    // clientOnly: default: false, if it is true then record only add in client side not afftect on server
-    // url: specify url for createAction
-    // animationsEnable: default: true, if true then show animation while deleting row
-    // success: it is callback function which is execute when ajax call success
-    // error: it is callback function which is execute when ajax call give something error
-    $("#table").jtable("deleteRecord", {
-        key: 4,
-        clientOnly: true,
-        animationsEnable: true,
-        url: "https://localhost:44319/api/Students",
-        success: function (data) {
-            console.log("message: " + data);
-        },
-        error: function (e) {
-            console.log("message: " + e);
-        },
-    });
-
     // load()
     // load a data into table
     $("#table").jtable("load", { id: 2 }, function () {
         console.log("table loaded successfully");
+
+        // getRowByKey()
+        // it is used to retieve recored by key
+        let $getRowByKey = $("#table").jtable("getRowByKey", 4);
+        let a = $("#table").jtable("instance");
+        // let $getRowByKey = $("#table").jtable("getRowByKey", {
+        //     key: 4,
+        // });
+        console.log($getRowByKey);
+
+        // addRecord()
+        // It is used to add new recored in table programmaticaly
+        // options:
+        // record: the object of record which we want to add
+        // clientOnly: default: false, if it is true then record only add in client side not afftect on server
+        // animationsEnable: default: true, if true then show animation while deleting row
+        // url: specify url for createAction
+        // success: it is callback function which is execute when ajax call success
+        // error: it is callback function which is execute when ajax call give something error
+        $("#table").jtable("addRecord", {
+            record: JSON.stringify({
+                name: "string",
+                rollNo: 102,
+                email: "user@example.com",
+                contactNo: "8582582546",
+            }),
+            clientOnly: true,
+            animationsEnable: true,
+            url: "https://localhost:44319/api/Students",
+            success: function (data) {
+                console.log("message: " + data);
+            },
+            error: function (e) {
+                console.log("message: " + e);
+            },
+        });
+
+        // changeColumnVisibility()
+        // it is used to change column visibility
+        // we have three diffrent behaviour of visibility
+        // hidden, visible, fixed
+        $("#table").jtable("changeColumnVisibility", "Id", "fixed");
+
+        // selectedRows()
+        // it is used to get all selected rows from table
+        let $selectedRows = $("#table").jtable("selectedRows");
+        console.log($selectedRows);
+
+        // deleteRows()
+        // it will delete rows fron server and client both side
+        // $("#table").jtable("deleteRows", 10);
+
+        // updateRocord()
+        // it is used to delete row by key
+        // options:
+        // record: the object of record which we want to add
+        // clientOnly: default: false, if it is true then record only add in client side not afftect on server
+        // url: specify url for createAction
+        // animationsEnable: default: true, if true then show animation while deleting row
+        // success: it is callback function which is execute when ajax call success
+        // error: it is callback function which is execute when ajax call give something error
+        $("#table").jtable("updateRecord", {
+            record: JSON.stringify({
+                id: 21,
+                name: "string",
+                rollNo: 102,
+                email: "user@example.com",
+                contactNo: "8582582546",
+            }),
+            clientOnly: true,
+            animationsEnable: true,
+            url: "https://localhost:44319/api/Students",
+            success: function (data) {
+                console.log("message: " + data);
+            },
+            error: function (e) {
+                console.log("message: " + e);
+            },
+        });
+
+        // deleteRecord()
+        // it is used to delete row by key
+        // options:
+        // record: the object of record which we want to add
+        // clientOnly: default: false, if it is true then record only add in client side not afftect on server
+        // url: specify url for createAction
+        // animationsEnable: default: true, if true then show animation while deleting row
+        // success: it is callback function which is execute when ajax call success
+        // error: it is callback function which is execute when ajax call give something error
+        $("#table").jtable("deleteRecord", {
+            key: 4,
+            clientOnly: true,
+            animationsEnable: true,
+            url: "https://localhost:44319/api/Students",
+            success: function (data) {
+                console.log("message: " + data);
+            },
+            error: function (e) {
+                console.log("message: " + e);
+            },
+        });
     });
+
     // give those recored which is id equals to 2, we also can handle request on server side
 
     // reload()
@@ -297,11 +299,11 @@ $(document).ready(function () {
     // child table methods
     // openChildRow()
     // it is used to open child rows
-    $("#table").jtable("oprnChildRow", 10);
+    // $("#table").jtable("oprnChildRow", 10);
 
     // closeChildRow()
     // it is used to close child rows
-    $("#table").jtable("closeChildRow", 10);
+    // $("#table").jtable("closeChildRow", 10);
 
     // openChildTable()
     // it is used to create and open child table
@@ -309,16 +311,16 @@ $(document).ready(function () {
     // row: data of the table
     // tableOptions: options of table
     // opened: callback function which is execute after table is opend
-    $("#table").jtable("openChildTable", 10, {}, function (data) {
-        data.childTable.reload();
-    });
+    // $("#table").jtable("openChildTable", 10, {}, function (data) {
+    //     data.childTable.reload();
+    // });
 
     // closeChildTable()
     // it is used to create and close child table
     // options:
     // row: data of the table
     // closed: callback function which is execute after table is closed
-    $("#table").jtable("closeChildTable", 10, function () {
-        console.log("table is closed");
-    });
+    // $("#table").jtable("closeChildTable", 10, function () {
+    //     console.log("table is closed");
+    // });
 });

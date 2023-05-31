@@ -2,7 +2,7 @@ $(document).ready(function () {
     $("#select").selectpicker();
 
     $("#select").on("show.bs.select", function (e) {
-        console.log("dropdown start to show"); // immidiatelly triggered when dropdown show event start
+        console.log("dropdown start to show"); // immediately triggered when dropdown show event start
     });
 
     $("#select").on("shown.bs.select", function (e) {
@@ -10,7 +10,7 @@ $(document).ready(function () {
     });
 
     $("#select").on("hide.bs.select", function (e) {
-        console.log("dropdown start to hide"); // immidiatelly triggered when dropdown hide event start
+        console.log("dropdown start to hide"); // immediately triggered when dropdown hide event start
     });
 
     $("#select").on("hiddem.bs.select", function (e) {

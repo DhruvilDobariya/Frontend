@@ -38,7 +38,7 @@ $(document).ready(function () {
         style: "btn-danger", // set style
         styleBase: "btn", // set base style
         tickIcon: "glyphicon-ok", // set which icon we want to use as tick
-        title: "Select City",
+        title: "Select City", // set title of dropdown
         width: "75%", // set width, we have different option like, auto, fit, 100%, 100px
         // virtualScoll: 10,
         windowPadding: 10, // set padding in widow, we also can pass array like [10, 20, 20, 40] which represent [top, right, bottom, left]

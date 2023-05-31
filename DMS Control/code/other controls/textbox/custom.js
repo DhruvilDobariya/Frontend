@@ -3,7 +3,7 @@ let $textbox = document.querySelector("input");
 // we hvae different types of attribute like,
 
 $textbox.setAttribute("autocomplete", "on"); // set auto complate on or off
-$textbox.setAttribute("dirname", "name.dir"); // set when form is submit direction of input is also includ in data, ex: city=Los Angeles&city.dir=ltr
+$textbox.setAttribute("dirname", "name.dir"); // set when form is submit direction of input is also include in data, ex: city=Los Angeles&city.dir=ltr
 // $textbox.setAttribute("disabled", true); // set desable textbox
 $textbox.setAttribute("list", "city-list"); // set id of data list which help in suggestions
 $textbox.setAttribute("required", true); // set field is required

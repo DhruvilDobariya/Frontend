@@ -100,6 +100,16 @@ $(document).ready(function () {
                 type: "checkbox",
                 values: { false: "Passive", true: "Active" },
             },
+            // checkBox: {
+            //     title: "Radio button",
+            //     list: false,
+
+            //     type: "checkbox",
+            //     options: {
+            //         1: "Male",
+            //         2: "Female",
+            //     },
+            // },
             dependedColumn: {
                 title: "Dependend Column",
                 dependsOn: "id", // This property use to get the date of the other field inside the current column

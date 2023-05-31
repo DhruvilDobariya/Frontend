@@ -5,12 +5,12 @@ $(document).ready(function () {
     // select based on value
     $("#select").selectpicker("val", ["4"]); // select one or more based on value
     // Or
-    $("#select").val("4"); // in normal way we want to refresh page so we use render method
+    $("#select").val("4"); // in normal way we want to render page so we use render method
     $("#select").selectpicker("render");
 
     // select all
     $("#select").selectpicker("selectAll"); // it will select all options
-    $("#select").selectpicker("deselectAll"); // it will select all options
+    $("#select").selectpicker("deselectAll"); // it will deselect all options
 
     // mobile
     if (/Android|webOS|iPhone|iPad|iPod|BlackBerry/i.test(navigator.userAgent)) {

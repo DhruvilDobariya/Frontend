@@ -3,7 +3,7 @@ let $numberbox = document.querySelector("input");
 // we hvae different types of attribute like,
 
 $numberbox.setAttribute("autocomplete", "on"); // set auto complate on or off
-$numberbox.setAttribute("dirname", "name.dir"); // set when form is submit direction of input is also includ in data, ex: city=Los Angeles&city.dir=ltr
+$numberbox.setAttribute("dirname", "name.dir"); // set when form is submit direction of input is also include in data, ex: city=Los Angeles&city.dir=ltr
 // $numberbox.setAttribute("disabled", true); // set desable textbox
 $numberbox.setAttribute("list", "city-list"); // set id of data list which help in suggestions
 $numberbox.setAttribute("required", true); // set field is required
