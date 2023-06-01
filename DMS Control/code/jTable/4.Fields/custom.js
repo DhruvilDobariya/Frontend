@@ -5,23 +5,24 @@ $(document).ready(function () {
         fields: {
             id: {
                 title: "Id", // title of this column in form
+                key: true, // set key of table
 
                 // By default all properties which have boolean value, that is true
-                edit: false, // this field don't show when we edit recored
-                create: false, // this field don't show when we edit recored
+                edit: false, // this field don't show when we edit record
+                create: false, // this field don't show when we edit record
                 delete: true, // it could be delete
 
                 columnResizable: true, // it allows us to resize column
                 width: "10%", // set width of column
-                visibility: "fixed", // set visibility behaviour
+                visibility: "fixed", // set visibility behavior
                 // we have three different option for visibility
                 // 1) fixed: this is always visible can't hide by user
                 // 2) visible: this is always visible can't hide by user
                 // 1) hidden: this is always visible can't hide by user
 
                 sorting: true, // enable sorting
-                optionSorting: "text-desc", // set the behaviour of sorting
-                // we have four different behaviour for sorting
+                optionSorting: "text-desc", // set the behavior of sorting
+                // we have four different behavior for sorting
                 // 1) value: sort according to the value in ascending, ex: 1, 2, 3,..., 10, 11, 12,..
                 // 2) value-desc: sort according to the value in descending ex: 21 , 20, 19, 18,..., 2, 1
                 // 3) text: sort according to the display text in ascending ex: 1, 10, 11, 2, 21, 3, 4, 41
@@ -70,7 +71,7 @@ $(document).ready(function () {
                 // the difference between visibility and list properties is,
                 // user have options to change behaviour of when we use visibility
                 // but in case of list user don't have chamge behaviour of field
-                listClass: "bg-danger text-success", // set classes in particuler field list
+                listClass: "bg-danger text-success", // set classes in particular field list
             },
             body: {
                 title: "Body",
@@ -123,7 +124,7 @@ $(document).ready(function () {
             input: {
                 title: "Input Demo",
                 list: false,
-                // create custumized input field
+                // create customized input field
                 input: function (data) {
                     // console.log(data);
                     if (data.record) {

@@ -2,12 +2,12 @@ $(document).ready(function () {
     $("#table").jtable({
         title: "Students", // set title of table
 
-        addRecordButton: "", // configur add button
-        // showCloseButton: true, // default: true, when user click on button, closeRequested event reised
-        // this is userd to close child table
+        addRecordButton: "", // configure add button
+        // showCloseButton: true, // default: true, when user click on button, closeRequested event triggered
+        // this is used to close child table
 
         ajaxSetting: {
-            // configur globl ajax request
+            // configur global ajax request
             type: "GET",
         },
 
@@ -24,7 +24,7 @@ $(document).ready(function () {
         paging: true, // default: false, enable paging
         pageSize: 10, // default: 10, set page size
         gotoPageArea: "none", // set direct page navigation is enable or not
-        pageSizeChangeArea: true, // default: true, set pagination combobox is eable or not
+        pageSizeChangeArea: true, // default: true, set pagination combobox is enable or not
         pageList: "normal", // set behaviour of navigation panel
         // we have two behaviour for navigation panel
         // 1) minimal: Show only first, previous, next and last links.
@@ -39,7 +39,7 @@ $(document).ready(function () {
 
         // delete configuration
         // deleteConfiguration: true, // default: true, it set whether dialog box open or not on delete
-        defaultConfiguration: function (data) {
+        deleteConfiguration: function (data) {
             // we also can configure behaviour of dialog box
             // data have following properties,
             // row: A jQuery selection for deleting row element.
@@ -73,7 +73,7 @@ $(document).ready(function () {
         tableId: "", // set table id for saving and restoring user preferance
 
         toolbar: {
-            hoverAnimation: true, // enable/ disable small animation of mouse hover on toolbar
+            hoverAnimation: true, // enable/disable small animation of mouse hover on toolbar
             hoverAnumationDuration: 60, // set hover animation duration
             hoverAnimationEasing: "swing", // set hover animation easing
 

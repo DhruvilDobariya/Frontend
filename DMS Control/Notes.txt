@@ -1,7 +1,0 @@
-Css:
-data-size
-container
-
-JS:
-Methods:
-deselectAll

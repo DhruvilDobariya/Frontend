@@ -175,19 +175,16 @@ $(document).ready(function () {
         console.log("table loaded successfully");
 
         // getRowByKey()
-        // it is used to retieve recored by key
+        // it is used to retrieve record by key
         let $getRowByKey = $("#table").jtable("getRowByKey", 4);
         let a = $("#table").jtable("instance");
-        // let $getRowByKey = $("#table").jtable("getRowByKey", {
-        //     key: 4,
-        // });
         console.log($getRowByKey);
 
         // addRecord()
-        // It is used to add new recored in table programmaticaly
+        // It is used to add new record in table programmaticaly
         // options:
         // record: the object of record which we want to add
-        // clientOnly: default: false, if it is true then record only add in client side not afftect on server
+        // clientOnly: default: false, if it is true then record only add in client side not affect on server
         // animationsEnable: default: true, if true then show animation while deleting row
         // url: specify url for createAction
         // success: it is callback function which is execute when ajax call success
@@ -212,7 +209,7 @@ $(document).ready(function () {
 
         // changeColumnVisibility()
         // it is used to change column visibility
-        // we have three diffrent behaviour of visibility
+        // we have three different behavior of visibility
         // hidden, visible, fixed
         $("#table").jtable("changeColumnVisibility", "Id", "fixed");
 
@@ -222,15 +219,15 @@ $(document).ready(function () {
         console.log($selectedRows);
 
         // deleteRows()
-        // it will delete rows fron server and client both side
+        // it will delete rows from server and client both side
         // $("#table").jtable("deleteRows", 10);
 
         // updateRocord()
         // it is used to delete row by key
         // options:
-        // record: the object of record which we want to add
-        // clientOnly: default: false, if it is true then record only add in client side not afftect on server
-        // url: specify url for createAction
+        // record: the object of record which we want to update
+        // clientOnly: default: false, if it is true then record only update in client side not affect on server
+        // url: specify url for updateAction
         // animationsEnable: default: true, if true then show animation while deleting row
         // success: it is callback function which is execute when ajax call success
         // error: it is callback function which is execute when ajax call give something error
@@ -256,9 +253,9 @@ $(document).ready(function () {
         // deleteRecord()
         // it is used to delete row by key
         // options:
-        // record: the object of record which we want to add
-        // clientOnly: default: false, if it is true then record only add in client side not afftect on server
-        // url: specify url for createAction
+        // record: the object of record which we want to delete
+        // clientOnly: default: false, if it is true then record only delete in client side not affect on server
+        // url: specify url for deleteAction
         // animationsEnable: default: true, if true then show animation while deleting row
         // success: it is callback function which is execute when ajax call success
         // error: it is callback function which is execute when ajax call give something error
@@ -285,7 +282,7 @@ $(document).ready(function () {
     });
 
     // destroy()
-    // it will destory table
+    // it will destroy table
     // $("#table").jtable("destroy");
 
     // selectRows()
@@ -310,7 +307,7 @@ $(document).ready(function () {
     // options:
     // row: data of the table
     // tableOptions: options of table
-    // opened: callback function which is execute after table is opend
+    // opened: callback function which is execute after table is opened
     // $("#table").jtable("openChildTable", 10, {}, function (data) {
     //     data.childTable.reload();
     // });

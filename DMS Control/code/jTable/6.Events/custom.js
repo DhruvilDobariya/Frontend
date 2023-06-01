@@ -166,7 +166,7 @@ $(document).ready(function () {
 
         // event
         // closeRequest
-        // it triggered when we click on close button of table
+        // it triggered when we click on  close button of table
         closeRequested: function (event, data) {
             $("#table").jtable("destroy");
             console.log("table closed");
@@ -217,24 +217,24 @@ $(document).ready(function () {
         // recordAdded
         // it triggered when record is add
         recordAdded: function (event, data) {
-            // data.record: it give us object of added recored
+            // data.record: it give us object of added record
             // data.serverResponse: it give use server response
             console.log("recored added successfully");
         },
 
-        // recordAdded
-        // it triggered when record is add
+        // recordUpdated
+        // it triggered when record is update
         recordUpdated: function (event, data) {
-            // data.record: it give us object of added recored
+            // data.record: it give us object of added record
             // data.row: it give us edited row
             // data.serverResponse: it give use server response
             console.log("recored updated successfully");
         },
 
-        // recordAdded
-        // it triggered when record is add
+        // recordDeleted
+        // it triggered when record is delete
         recordDeleted: function (event, data) {
-            // data.record: it give us object of added recored
+            // data.record: it give us object of added record
             // data.row: it give us deleted row
             // data.serverResponse: it give use server response
             console.log("recored deleted successfully");
@@ -273,5 +273,4 @@ $(document).ready(function () {
     });
 
     $("#table").jtable("load");
-    
 });
