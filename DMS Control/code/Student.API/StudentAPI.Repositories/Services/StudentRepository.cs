@@ -33,7 +33,11 @@ namespace StudentAPI.Repositories.Services
 
                 IEnumerable<Student> data;
 
-                if (sorting.Split(" ")[1] == "ASC")
+                if(sorting == null)
+                {
+                    data = await _connection.QueryAsync<Student>($"Select * From Student");
+                }
+                else if (sorting.Split(" ")[1] == "ASC")
                 {
                     data = await _connection.QueryAsync<Student>($"Select * From Student Order By {sorting.Split(' ')[0]}");
                 }
@@ -42,11 +46,18 @@ namespace StudentAPI.Repositories.Services
                     data = await _connection.QueryAsync<Student>($"Select * From Student Order By {sorting.Split(' ')[0]} DESC");
                 }
 
-                StudentListModel students = new StudentListModel()
+                StudentListModel students = new StudentListModel();
+                if (pageSize != 0)
                 {
-                    Students = data.Skip((startIndex/pageSize) * pageSize).Take(pageSize).ToList(),
-                    Count = data.Count()
-                };
+
+                    students.Students = data.Skip((startIndex / pageSize) * pageSize).Take(pageSize).ToList();
+                    students.Count = data.Count();
+                }
+                else
+                {
+                    students.Students = data.ToList();
+                    students.Count = data.Count();
+                }
 
                 if (_connection.State == ConnectionState.Open)
                     _connection.Close();
