@@ -1,5 +1,5 @@
 $(document).ready(function () {
-    let $instace = $("#table").jtable({
+    $("#table").jtable({
         title: "Students",
 
         fields: {
@@ -143,7 +143,7 @@ $(document).ready(function () {
         },
     });
 
-    $("#table").jtable("load");
-    // $instace.load()
-    console.log($instace);
+    let instance = $("#table").jtable("instance");
+    console.log(instance);
+    instance.load();
 });

@@ -1,0 +1,40 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8" />
+        <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+        <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+        <title>Document</title>
+        <link rel="stylesheet" href="../../assets/lib/bootstrap/css/bootstrap.min.css" />
+        <link rel="stylesheet" href="../../assets/lib/jquery-ui-1.13.2/jquery-ui.min.css" />
+        <link rel="stylesheet" href="../../assets/lib/jtable/jtable.2.4.0/themes/metro/darkgray/jtable.min.css" />
+    </head>
+    <body>
+        <div class="container">
+            <div class="row my-4">
+                <div class="col-md-5">
+                    <label for="" class="form-label">Search</label>
+                    <input type="text" name="" id="txtSearch" class="form-control" />
+                </div>
+                <div class="col-md-5">
+                    <label for="" class="form-label">Select Table</label>
+                    <select class="form-select" id="ddlOptions">
+                        <option value="-1">Select Table</option>
+                    </select>
+                </div>
+                <div class="col-md-1 p-4">
+                    <button class="btn btn-danger mt-2" id="btnLoad">Load</button>
+                </div>
+            </div>
+            <div class="row">
+                <div id="table"></div>
+            </div>
+        </div>
+
+        <script src="../../assets/lib/jQuery/jquery-3.6.3.min.js"></script>
+        <script src="../../assets/lib/bootstrap/js/bootstrap.bundle.min.js"></script>
+        <script src="../../assets/lib/jquery-ui-1.13.2/jquery-ui.min.js"></script>
+        <script src="../../assets/lib/jtable/jtable.2.4.0/jquery.jtable.js"></script>
+        <script src="./custom.js"></script>
+    </body>
+</html>
