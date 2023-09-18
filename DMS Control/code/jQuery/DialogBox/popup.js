@@ -9,7 +9,7 @@ function prepareHTML() {
         let name = $("#name").val();
         let email = $("#email").val();
         addTableRow(name, email);
-        $("#popupModal").modal("hide");
+        $("#popupContainer").dialog("close");
     });
 }
 
